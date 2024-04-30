@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace GroupTaskAdvisor
 {
-    public partial class Form1 : Form
+    public partial class Form_Login : Form
     {
-        public Form1()
+        public Form_Login()
         {
             InitializeComponent();
         }
+
     }
 }
