@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|c:\\users\\\uB3C4\uCE58\\source\\repos\\kwu-applied-software-practice-project-nam\\task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeamCreateForm.cs",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\TeamCreateForm.cs",
+              "RelativeDocumentMoniker": "task\\TeamCreateForm.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\TeamCreateForm.cs",
+              "RelativeToolTip": "task\\TeamCreateForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:54:50.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeamCreateForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\TeamCreateForm.cs",
+              "RelativeDocumentMoniker": "task\\TeamCreateForm.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:54:46.827Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\Form1.cs",
+              "RelativeDocumentMoniker": "task\\Form1.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\Form1.cs",
+              "RelativeToolTip": "task\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:47:56.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\Form1.cs",
+              "RelativeDocumentMoniker": "task\\Form1.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\KWU-Applied-Software-Practice-Project-nam\\task\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "task\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:46:42.551Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -21,5 +21,21 @@ namespace task
         {
 
         }
+
+        private void btnTeamCreate_Click(object sender, EventArgs e)
+        {
+            TeamCreateForm tcf = new TeamCreateForm();
+            tcf.Show();
+        }
+
+        private void btnTeamManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTeamDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

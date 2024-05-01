@@ -1,0 +1,15 @@
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.csproj.AssemblyReference.cache
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.Form1.resources
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.TeamCreateForm.resources
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.Properties.Resources.resources
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.csproj.GenerateResource.cache
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.csproj.CoreCompileInputs.cache
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\task.exe.config
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\task.exe
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\task.pdb
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\MetroFramework.Design.dll
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\MetroFramework.dll
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.csproj.Up2Date
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.exe
+C:\Users\도치\source\repos\KWU-Applied-Software-Practice-Project-nam\task\obj\Debug\task.pdb
