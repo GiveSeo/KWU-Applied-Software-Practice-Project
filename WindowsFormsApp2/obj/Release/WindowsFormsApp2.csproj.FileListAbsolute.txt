@@ -1,0 +1,13 @@
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe.config
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\bin\Release\WindowsFormsApp2.pdb
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\bin\Release\ClassLibrary.dll
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\bin\Release\ClassLibrary.pdb
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Form1.resources
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CopyComplete
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.exe
+C:\Users\jun12\source\repos\ClassLibrary\WindowsFormsApp2\obj\Release\WindowsFormsApp2.pdb

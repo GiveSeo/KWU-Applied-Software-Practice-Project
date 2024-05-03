@@ -1,0 +1,6 @@
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\bin\Release\ClassLibrary.dll
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\bin\Release\ClassLibrary.pdb
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\obj\Release\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\obj\Release\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\obj\Release\ClassLibrary.dll
+C:\Users\jun12\source\repos\ClassLibrary\ClassLibrary\obj\Release\ClassLibrary.pdb
