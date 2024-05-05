@@ -1,0 +1,22 @@
+*프로젝트를 위해 생성된 클래스들은 모두 Myclass 네임스페이스에 저장되고, 추후 빌드시 모든 클래스들은 dll 파일로 저장됨.
+
+class User // 사용자 정보 클래스
+{
+	string name; // 사용자 닉네임
+	string id; // 사용자 아이디
+	string password // 사용자 비밀번호
+	List<int> cur_teamids // 사용자가 속해 있는 팀의 식별자를 저장하는 배열
+}
+
+User 클래스는 파일에 name, id, password, (cur_teamids 안의 모든 int)를 콤마로 구별되어 저장됨
+
+class Team // 팀 정보 클래스
+{
+	int id; // 팀의 고유 식별자
+	User admin; // 팀장, 팀당 1명
+	int people; // 총 인원 수
+	string project; // 팀의 프로젝트 이름
+	List<string> goals; // 프로젝트의 목표들을 저장하는 배열
+}
+
+Team 클래스는 파일에 id, (admin의 id 또는 name, 미정), people, project, (goals 안의 모든 string)을 콤마로 구별되어 저장됨

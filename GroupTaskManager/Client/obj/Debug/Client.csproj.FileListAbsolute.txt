@@ -1,0 +1,14 @@
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Client.exe.config
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Client.exe
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Client.pdb
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Myclass.dll
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Myclass.pdb
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.Login_form.resources
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.SignUp_form.resources
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.csproj.Up2Date
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.exe
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.pdb
