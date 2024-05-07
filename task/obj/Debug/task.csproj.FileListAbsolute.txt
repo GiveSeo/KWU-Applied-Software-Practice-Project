@@ -1,0 +1,17 @@
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\task.exe.config
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\task.exe
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\task.pdb
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\MetroFramework.Design.dll
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\MetroFramework.dll
+C:\Users\namgihyeon\sourcecode\task\task\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.csproj.AssemblyReference.cache
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.Form1.resources
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.Form2.resources
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.Properties.Resources.resources
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.UserControlday.resources
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.csproj.GenerateResource.cache
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.csproj.CoreCompileInputs.cache
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.csproj.Up2Date
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.exe
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.pdb
+C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.UserControlblank.resources
