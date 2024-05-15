@@ -12,6 +12,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Diagnostics;
+using Myclass;
 
 namespace Client
 {
@@ -19,10 +20,12 @@ namespace Client
     public partial class Temp : Form
     {
         TcpClient client;
-        public Temp(TcpClient t)
+        User cur_user;
+        public Temp(TcpClient t, User cur_user)
         {
             InitializeComponent();
             client = t;
+            this.cur_user = cur_user;
         }
 
         private void Temp_FormClosed(object sender, FormClosedEventArgs e)

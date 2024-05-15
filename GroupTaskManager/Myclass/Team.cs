@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Myclass
 {
-    public class Team
+    [Serializable]
+    public class Team : Packet
     {
         private int id; 
         private User admin;

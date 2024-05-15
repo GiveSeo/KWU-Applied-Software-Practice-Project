@@ -8,24 +8,28 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Myclass
 {
+    public enum PacketType : int
+    {
+        NOTHING = 0,
+        SIGNUP,
+        LOGIN,
+        OK
+    }
+
     [Serializable]
     public class Packet
     {
-        public int length;
-        public int type;
-        public Packet()
-        {
-            length = 0;
-            type = 0;
-        }
-        public static byte[] serialize(Object o)
+        public static int length = 4096;
+        public PacketType type = PacketType.NOTHING;
+        public Packet() { }
+        public static byte[] Serialize(Object o)
         {
             MemoryStream ms = new MemoryStream(4096);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(ms, o);
             return ms.ToArray();
         }
-        public static Object deserialize(byte[] b)
+        public static Object Deserialize(byte[] b)
         {
             MemoryStream ms = new MemoryStream(4096);
             foreach (byte bb in b)

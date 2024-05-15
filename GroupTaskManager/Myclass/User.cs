@@ -9,7 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Myclass
 {
     [Serializable]
-    public class User
+    public class User : Packet
     {
         private string name;
         private string id;
