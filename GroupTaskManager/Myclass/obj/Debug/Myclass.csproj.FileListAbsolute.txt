@@ -1,0 +1,12 @@
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\bin\Debug\Myclass.dll
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\bin\Debug\Myclass.pdb
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.AssemblyReference.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.CoreCompileInputs.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.dll
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.pdb
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\bin\Debug\Myclass.dll
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\bin\Debug\Myclass.pdb
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.AssemblyReference.cache
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.CoreCompileInputs.cache
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\obj\Debug\Myclass.dll
+C:\Users\crime\Downloads\KWU-Applied-Software-Practice-Project-kl35805\KWU-Applied-Software-Practice-Project-kl35805\GroupTaskManager\Myclass\obj\Debug\Myclass.pdb

@@ -1,1 +1,2 @@
-2020203085 소프트웨어학부 전병은이 작업한 내용
+# KWU-Applied-Software-Practice-Project
+광운대학교 응용소프트웨어 실습 프로젝트

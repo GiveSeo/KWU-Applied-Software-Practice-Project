@@ -1,0 +1,231 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|c:\\users\\crime\\downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\kwu-applied-software-practice-project-kl35805\\grouptaskmanager\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\myclass\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\temp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAswJoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T17:31:56.019Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Login.cs",
+              "RelativeDocumentMoniker": "Client\\Login.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Login.cs",
+              "RelativeToolTip": "Client\\Login.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T07:33:45.066Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Login.cs",
+              "RelativeDocumentMoniker": "Client\\Login.cs",
+              "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Login.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Login.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T04:48:42.092Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SignUp.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\SignUp.cs",
+              "RelativeDocumentMoniker": "Client\\SignUp.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\SignUp.cs",
+              "RelativeToolTip": "Client\\SignUp.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAwAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T07:33:47.381Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignUp.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\SignUp.cs",
+              "RelativeDocumentMoniker": "Client\\SignUp.cs",
+              "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\SignUp.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\SignUp.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T04:48:41.232Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Temp.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.cs",
+              "RelativeDocumentMoniker": "Client\\Temp.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\KWU-Applied-Software-Practice-Project-kl35805\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\..\\..\\KWU-Applied-Software-Practice-Project-kl35805\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T04:48:38.608Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Temp.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.cs",
+              "RelativeDocumentMoniker": "Client\\Temp.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.cs",
+              "RelativeToolTip": "Client\\Temp.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAA6wGsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T06:03:59.825Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\User.cs",
+              "RelativeDocumentMoniker": "Myclass\\User.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\User.cs",
+              "RelativeToolTip": "Myclass\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T05:02:34.086Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Packet.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\Packet.cs",
+              "RelativeDocumentMoniker": "Myclass\\Packet.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\Packet.cs",
+              "RelativeToolTip": "Myclass\\Packet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T05:02:44.583Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\Team.cs",
+              "RelativeDocumentMoniker": "Myclass\\Team.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Myclass\\Team.cs",
+              "RelativeToolTip": "Myclass\\Team.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T07:28:21.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Temp.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.Designer.cs",
+              "RelativeDocumentMoniker": "Client\\Temp.Designer.cs",
+              "ToolTip": "C:\\Users\\crime\\Downloads\\\uD300\uD504\uB85C\uC81D\uD2B8_\uCC44\uD305\uC571\\\uCC44\uD305\uAE30\uB2A5\uAC1C\uBC1C\\KWU-Applied-Software-Practice-Project-kl35805\\GroupTaskManager\\Client\\Temp.Designer.cs",
+              "RelativeToolTip": "Client\\Temp.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T13:00:01.292Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
