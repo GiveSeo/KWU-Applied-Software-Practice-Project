@@ -29,9 +29,19 @@ namespace Server
             users = uu.OfType<User>().ToList();
             stream.Close();
         }
+
+        static void ReadTeam()
+        {
+            FileStream stream = File.OpenRead("Team.txt");
+            BinaryFormatter bf = new BinaryFormatter();
+            Team[] tt = (Team[])bf.Deserialize(stream);
+            teams = tt.OfType<Team>().ToList();
+            stream.Close();
+        }
         static void Main(string[] args)
         {
             ReadUser();
+            ReadTeam();
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 13000);
             Console.WriteLine("!서버 실행!");
             listener.Start();
