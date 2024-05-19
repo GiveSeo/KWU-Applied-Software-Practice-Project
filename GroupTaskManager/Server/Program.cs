@@ -20,8 +20,18 @@ namespace Server
         static List<Team> teams = new List<Team>();
         static byte[] readbuffer = new byte[Packet.length];
         static byte[] writebuffer = new byte[Packet.length];
+
+        static void ReadUser()
+        {
+            FileStream stream = File.OpenRead("User.txt");
+            BinaryFormatter bf = new BinaryFormatter();
+            User[] uu = (User[])bf.Deserialize(stream);
+            users = uu.OfType<User>().ToList();
+            stream.Close();
+        }
         static void Main(string[] args)
         {
+            ReadUser();
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 13000);
             Console.WriteLine("!서버 실행!");
             listener.Start();
