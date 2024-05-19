@@ -13,3 +13,4 @@ C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.csproj.Up
 C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.exe
 C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.pdb
 C:\Users\ijh1382\source\repos\GroupTaskManager\Client\obj\Debug\Client.Temp.resources
+C:\Users\ijh1382\source\repos\GroupTaskManager\Client\bin\Debug\Myclass.dll.config
