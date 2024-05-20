@@ -1,0 +1,13 @@
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\bin\Release\ServerApp.exe.config
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\bin\Release\ServerApp.exe
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\bin\Release\ServerApp.pdb
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\bin\Release\Myclass.dll
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\bin\Release\Myclass.pdb
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.csproj.AssemblyReference.cache
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.Form1.resources
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.Properties.Resources.resources
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.csproj.GenerateResource.cache
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.csproj.CoreCompileInputs.cache
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.csproj.Up2Date
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.exe
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\ServerApp\obj\Release\ServerApp.pdb

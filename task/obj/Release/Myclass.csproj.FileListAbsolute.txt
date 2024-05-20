@@ -1,0 +1,6 @@
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\bin\Release\Myclass.dll
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\bin\Release\Myclass.pdb
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\obj\Release\Myclass.csproj.AssemblyReference.cache
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\obj\Release\Myclass.csproj.CoreCompileInputs.cache
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\obj\Release\Myclass.dll
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\obj\Release\Myclass.pdb

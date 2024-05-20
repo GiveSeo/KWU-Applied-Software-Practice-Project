@@ -1,0 +1,6 @@
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\bin\Debug\Myclass.dll
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\bin\Debug\Myclass.pdb
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.AssemblyReference.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.csproj.CoreCompileInputs.cache
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.dll
+C:\Users\ijh1382\source\repos\GroupTaskManager\Myclass\obj\Debug\Myclass.pdb
