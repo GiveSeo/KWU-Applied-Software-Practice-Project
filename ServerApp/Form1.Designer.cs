@@ -41,6 +41,7 @@
             this.Teamlv.Size = new System.Drawing.Size(276, 349);
             this.Teamlv.TabIndex = 0;
             this.Teamlv.UseCompatibleStateImageBehavior = false;
+            this.Teamlv.SelectedIndexChanged += new System.EventHandler(this.Teamlv_SelectedIndexChanged);
             // 
             // Team
             // 

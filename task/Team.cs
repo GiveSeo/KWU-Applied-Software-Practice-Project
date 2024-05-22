@@ -14,7 +14,7 @@ namespace Myclass
         private User admin;
         private int people;
         private string project;
-        private List<string> goals;
+        public List<string> goals;
         public Team(int i, User u, string p)
         {
             id = i;

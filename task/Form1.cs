@@ -43,7 +43,7 @@ namespace task
             this.m_client  = new TcpClient();
             try
             {
-                this.m_client.Connect("127.0.0.1", 7777);
+                    this.m_client.Connect("127.0.0.1", 7777);
             }
             catch
             {
@@ -55,6 +55,31 @@ namespace task
             new_team.type = (int)PacketType.NOTHING;
             Packet.Serialize(new_team).CopyTo(this.sendBuffer, 0);
             this.Send();
+        }
+        private void onGoalDataPassed(int teamid, List<string> goal)
+        {
+            Team new_team = null;
+            foreach(Team s in teams)
+            {
+                if(teamid == s.id)
+                {
+                    new_team = s;
+                    foreach(string str in goal)
+                    {
+                        s.goals.Add(str);
+                        ListViewItem k = new ListViewItem(teamid.ToString());
+                        k.SubItems.Add(str);
+                        GoalListView.Items.Add(k);
+                    }
+                }
+            }
+            if(new_team!=null)
+                new_team.instruction = 2;//edit
+            this.m_networtstream = this.m_client.GetStream();
+            new_team.type = (int)PacketType.NOTHING;
+            Packet.Serialize(new_team).CopyTo(this.sendBuffer, 0);
+            this.Send();
+
         }
         public void Send()
         {
@@ -80,7 +105,9 @@ namespace task
 
         private void btnTeamManage_Click(object sender, EventArgs e)
         {
-
+            TeamManageForm tmf = new TeamManageForm();
+            tmf.onGoalDataPassed += new TeamManageForm.DataPassedHandler(onGoalDataPassed);
+            tmf.Show();
         }
 
         private void btnTeamDelete_Click(object sender, EventArgs e)

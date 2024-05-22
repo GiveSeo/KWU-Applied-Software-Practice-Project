@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Threading;
 using Myclass;
+using System.Security.Policy;
 
 
 namespace ServerApp
@@ -76,6 +77,14 @@ namespace ServerApp
                         ListViewItem s = new ListViewItem(m_team.id.ToString());
                         Teamlv.Items.Add(s);
                     }
+                    else if(m_team.instruction == 2)
+                    {
+                        foreach(string s in m_team.goals)
+                        {
+                            ListViewItem str = new ListViewItem(s);
+                            Teamlv.Items.Add(str);
+                        }
+                    }
                     else if(m_team.instruction == 3) {
                         foreach(ListViewItem It in Teamlv.Items)
                         {
@@ -102,6 +111,11 @@ namespace ServerApp
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Teamlv_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -18,3 +18,4 @@ C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\ob
 C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\bin\Release\ServerApp.exe
 C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\bin\Release\ServerApp.pdb
 C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\bin\Release\ServerApp.exe.config
+C:\Users\도치\source\repos\my_hw\KWU-Applied-Software-Practice-Project\task\obj\Release\task.TeamManageForm.resources
