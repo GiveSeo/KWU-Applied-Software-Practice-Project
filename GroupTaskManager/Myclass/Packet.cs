@@ -13,6 +13,7 @@ namespace Myclass
         NOTHING = 0,
         SIGNUP,
         LOGIN,
+        LOGOUT,
         OK
     }
 
@@ -22,6 +23,11 @@ namespace Myclass
         public static int length = 4096;
         public PacketType type = PacketType.NOTHING;
         public Packet() { }
+        public Packet(PacketType type)
+        {
+            this.type = type;
+        }
+
         public static byte[] Serialize(Object o)
         {
             MemoryStream ms = new MemoryStream(4096);

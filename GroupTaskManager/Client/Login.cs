@@ -36,7 +36,7 @@ namespace Client
         {
             client = new TcpClient("127.0.0.1", 13000);
             stream = client.GetStream();
-            User u = new User(string.Empty, id_textbox.Text, pw_textbox.Text);
+            User u = new User(id_textbox.Text, pw_textbox.Text);
             u.type = PacketType.LOGIN;
             byte[] writebuffer = Packet.Serialize(u);
             stream.Write(writebuffer, 0, writebuffer.Length);
@@ -45,15 +45,26 @@ namespace Client
             stream.Read(readbuffer, 0, readbuffer.Length);
             User uu = (User)Packet.Deserialize(readbuffer);
             if (uu.type != PacketType.OK)
+            {
                 MessageBox.Show("로그인 실패");
+                stream.Close();
+                client.Close();
+                return;
+            }
             else
             {
-                Temp t = new Temp(client, uu);
+                stream.Read(readbuffer, 0, readbuffer.Length);
+                List<User> ul = (List<User>)Packet.Deserialize(readbuffer);
+                writebuffer = Packet.Serialize(new Packet(PacketType.OK));
+                stream.Write(writebuffer, 0, writebuffer.Length);
+                stream.Flush();
+                stream.Read(readbuffer, 0, readbuffer.Length);
+                List<Team> tl = (List<Team>)Packet.Deserialize(readbuffer);
+                Temp t = new Temp(client, stream, uu, ul, tl);
                 t.Owner = this;
-                t.Show();
                 this.Visible = false;
+                t.Show();
             }
-            stream.Close();
         }
     }
 }

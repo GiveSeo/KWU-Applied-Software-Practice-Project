@@ -17,19 +17,15 @@ namespace Client
 {
     public partial class SignUp_form : Form
     {
-        TcpClient client;
-        NetworkStream stream;
         public SignUp_form()
         {
             InitializeComponent();
-            client = null;
-            stream = null;
         }
 
         private void signup_btn_Click(object sender, EventArgs e)
         {
-            client = new TcpClient("127.0.0.1", 13000);
-            stream = client.GetStream();
+            TcpClient client = new TcpClient("127.0.0.1", 13000);
+            NetworkStream stream = client.GetStream();
             User u = new User(name_textbox.Text, id_textbox.Text, pw_textbox.Text);
             u.type = PacketType.SIGNUP;
             byte[] writebuffer = Packet.Serialize(u);
@@ -42,8 +38,8 @@ namespace Client
                 MessageBox.Show("회원가입 실패");
             else
                 MessageBox.Show("회원가입 성공");
-            client.Close();
             stream.Close();
+            client.Close();
             this.Close();
         }
     }

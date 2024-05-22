@@ -22,9 +22,26 @@ namespace Myclass
             this.password = password;
             cur_teamids = new List<int>(); ;
         }
-        public string get_id() {  return id; }
-        public string get_password() { return password; }
-        public string get_name() { return name; }
-        public string get_all() { return name + "," + id + ',' + password; }
+        public User(string id, string password)
+        {
+            this.name = string.Empty;
+            this.id = id;
+            this.password = password;
+            cur_teamids = null;
+        }
+        public string GetId() {  return id; }
+        public string GetPassword() { return password; }
+        public string GetName() { return name; }
+        public List<int> GetTeamIds() { return cur_teamids; }
+        public void AddTeamId(int tid) { cur_teamids.Add(tid); }
+        public void RemoveTeamId(int tid)
+        {
+            if (cur_teamids.Count == 0)
+                return;
+            cur_teamids.Remove(tid);
+        }
+        public void ChangeName(string name) { this.name = name; }
+        public void ChangeID(string id) { this.id = id; }
+        public void ChangePassword(string pw) { this.password = pw; }
     }
 }
