@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using Myclass;
 using System.Runtime.CompilerServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Server
 {
@@ -17,7 +18,7 @@ namespace Server
     {
         static List<User> userlist = new List<User>();
         static List<User> cur_userlist = new List<User>();
-        static List<TcpClient> chatClients = new List<TcpClient>();
+        static List<(TcpClient client, string name)> chatClients = new List<(TcpClient, string)>(); // 채팅 중인 유저 리스트
 
         static void load_userlist()
         {
@@ -107,6 +108,8 @@ namespace Server
                 }
                 writer.WriteLine(temp);
                 writer.Flush();
+                writer.WriteLine(uu.get_name());
+                writer.Flush();
                 Console.WriteLine("send [{0}]", temp);
                 if (temp.Equals("ss"))
                     cur_userlist.Add(uu);
@@ -123,8 +126,12 @@ namespace Server
             while (true)
             {
                 TcpClient client = listener.AcceptTcpClient();
-                chatClients.Add(client);
-                Console.WriteLine("new chat client connected");
+                NetworkStream stream = client.GetStream();
+                StreamReader reader = new StreamReader(stream);
+                StreamWriter writer = new StreamWriter(stream) { AutoFlush = true };
+                string name = reader.ReadLine();
+                chatClients.Add((client, name));
+                Console.WriteLine("new chat client connected: " + name);
                 Thread chatThread = new Thread(() => handleChatClient(client));
                 chatThread.Start();
             }
@@ -137,11 +144,19 @@ namespace Server
             while (true)
             {
                 string message = reader.ReadLine();
+                string whisper = reader.ReadLine();
                 if (message == null) break;
                 Console.WriteLine("received message: " + message);
-                broadcastMessage(message, client); // 메시지를 모든 클라이언트에게 전송
+                if (string.IsNullOrEmpty(whisper))
+                {
+                    broadcastMessage(message, client); // 메시지를 모든 클라이언트에게 전송
+                }
+                else
+                {
+                    WhisperMessage(message, client, whisper);
+                }
             }
-            chatClients.Remove(client);
+            chatClients.RemoveAll(c => c.client == client);
             client.Close();
         }
 
@@ -149,11 +164,33 @@ namespace Server
         static void broadcastMessage(string message, TcpClient sender)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(message);
-            foreach (TcpClient client in chatClients)
+            foreach (var (client, _) in chatClients)
             {
                 NetworkStream stream = client.GetStream();
                 stream.Write(buffer, 0, buffer.Length);
-                
+            }
+        }
+
+        static void WhisperMessage(string message, TcpClient sender, string whisper)
+        {
+            byte[] buffer = Encoding.UTF8.GetBytes(whisper + "<-" + message);
+            foreach (var (client, username) in chatClients)
+            {
+                if (username.Equals(whisper, StringComparison.OrdinalIgnoreCase))
+                {
+                    try
+                    {
+                        NetworkStream stream1 = client.GetStream();
+                        stream1.Write(buffer, 0, buffer.Length);
+                        NetworkStream stream2 = sender.GetStream();
+                        stream2.Write(buffer, 0, buffer.Length);
+                        Console.WriteLine($"Whispered to {username}: {message}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error sending whisper to {username}: {ex.Message}");
+                    }
+                }
             }
         }
 

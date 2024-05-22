@@ -46,7 +46,8 @@ namespace Client
             string s = reader.ReadLine();
             if (s.Equals("ss"))
             {
-                Temp t = new Temp(client);
+                string name = reader.ReadLine();
+                Temp t = new Temp(client, id_textbox.Text, pw_textbox.Text, name);
                 t.Show();
                 this.Visible = false;
             }

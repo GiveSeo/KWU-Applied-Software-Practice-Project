@@ -13,6 +13,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Diagnostics;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Client
 {
@@ -22,32 +23,61 @@ namespace Client
         private TcpClient client;
         private NetworkStream stream;
         private Thread receiveThread;
+        private StreamReader reader;
+        private StreamWriter writer;
 
-        public Temp(TcpClient t)
+        private string user_name;
+        private string user_id;
+        private string user_pw;
+        private string ChatLogFolderPath = @"C:\Users\Public\Documents";
+        private string ChatLogFilePath;
+
+        public Temp(TcpClient t, string userid, string userpw, string username)
         {
             InitializeComponent();
             client = t;
+            user_id = userid;
+            user_pw = userpw;
+            user_name = username;
+            ChatLogFilePath = Path.Combine(ChatLogFolderPath, user_id + ".txt");
+            label_Name.Text = user_name;
+            if (File.Exists(ChatLogFilePath))
+            {
+                ChatTextBox.Text = File.ReadAllText(ChatLogFilePath);
+            }
+            ConnectToChatServer();
         }
 
         private void Temp_FormClosed(object sender, FormClosedEventArgs e)
         {
+            File.WriteAllText(ChatLogFilePath, ChatTextBox.Text);
             client.Close();
             this.Owner.Close();
         }
 
-        private void ConnectButton_Click(object sender, EventArgs e)
+        private void ConnectToChatServer()
         {
-            client = new TcpClient();
             try
             {
-                client.Connect("127.0.0.1", 13002);
+                // 서버에 연결
+                client = new TcpClient("127.0.0.1", 13002);
                 stream = client.GetStream();
-                receiveThread = new Thread(ReceiveMessages);
-                receiveThread.Start();
+                reader = new StreamReader(stream);
+                writer = new StreamWriter(stream);
+
+                writer.WriteLine(user_name);
+                writer.Flush();
+
+                // 서버와 연결되었다는 메시지를 채팅 로그에 표시
+                AppendMessage("Connected to server." + "Hello, " + user_name);
+
+                // 채팅을 처리하는 쓰레드 시작
+                Thread chatThread = new Thread(ReceiveMessages);
+                chatThread.Start();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("서버에 연결할 수 없습니다: " + ex.Message);
+                MessageBox.Show($"Error connecting to server: {ex.Message}");
             }
         }
 
@@ -55,8 +85,10 @@ namespace Client
         {
             if (client != null && client.Connected)
             {
-                byte[] buffer = Encoding.UTF8.GetBytes(MessageTextBox.Text + Environment.NewLine);
-                stream.Write(buffer, 0, buffer.Length);
+                byte[] buffer1 = Encoding.UTF8.GetBytes(user_name + ": " + MessageTextBox.Text + Environment.NewLine);
+                stream.Write(buffer1, 0, buffer1.Length);
+                byte[] buffer2 = Encoding.UTF8.GetBytes(textBox_Whisper.Text + Environment.NewLine);
+                stream.Write(buffer2, 0, buffer2.Length);
                 MessageTextBox.Clear();
             }
         }
