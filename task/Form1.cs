@@ -35,7 +35,6 @@ namespace task
         {
             ListViewItem s = new ListViewItem(teamid.ToString());
             s.SubItems.Add(teamMemId.Count.ToString());
-            s.SubItems.Add(teamid.ToString());
             TeamListView.Items.Add(s);
             Team new_team = new Team(teamid, null, null);
             new_team.instruction = 1;
