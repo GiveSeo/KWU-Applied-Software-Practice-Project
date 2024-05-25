@@ -19,7 +19,7 @@ namespace Client
     
     public partial class Temp : Form
     {
-        TcpClient client;
+        TcpClient client; 
         NetworkStream stream;
         User cur_user;
         List<User> users;
@@ -36,12 +36,6 @@ namespace Client
 
         private void Temp_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Packet p = new Packet(PacketType.LOGOUT);
-            byte[] buffer = Packet.Serialize(p);
-            stream.Write(buffer, 0, buffer.Length);
-            stream.Flush();
-            stream.Close();
-            client.Close();
             this.Owner.Close();
         }
 
@@ -62,6 +56,22 @@ namespace Client
         private void teamadd_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Packet p = new Packet(PacketType.LOGOUT);
+            byte[] writebuffer = Packet.Serialize(p);
+            stream.Write(writebuffer, 0, writebuffer.Length);
+            byte[] readbuffer = new byte[Packet.length];
+            stream.Read(readbuffer, 0, readbuffer.Length);
+            p=(Packet)Packet.Deserialize(readbuffer);
+            if (p.type == PacketType.OK)
+            {
+                stream.Close();
+                client.Close();
+                this.Close();
+            }
         }
     }
 }

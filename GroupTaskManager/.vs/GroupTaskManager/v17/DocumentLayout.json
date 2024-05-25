@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|c:\\users\\ijh1382\\source\\repos\\grouptaskmanager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|c:\\users\\ijh1382\\source\\repos\\grouptaskmanager\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\myclass\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAowGEAAAAvAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAGcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T17:31:56.019Z",
               "IsPinned": true,
@@ -68,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Login.cs",
               "RelativeDocumentMoniker": "Client\\Login.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Login.cs",
               "RelativeToolTip": "Client\\Login.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAADoAAABBAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T07:33:45.066Z",
               "IsPinned": true,
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Login.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Login.cs",
               "RelativeDocumentMoniker": "Client\\Login.cs",
@@ -95,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "SignUp.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\SignUp.cs",
               "RelativeDocumentMoniker": "Client\\SignUp.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\SignUp.cs",
               "RelativeToolTip": "Client\\SignUp.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAAbAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAuwCgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T07:33:47.381Z",
               "IsPinned": true,
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "SignUp.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\SignUp.cs",
               "RelativeDocumentMoniker": "Client\\SignUp.cs",
@@ -122,13 +122,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Temp.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeDocumentMoniker": "Client\\Temp.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeToolTip": "Client\\Temp.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAIAzwCkAAAAbAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAhwEcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T06:03:59.825Z",
               "IsPinned": true,
@@ -136,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Temp.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeDocumentMoniker": "Client\\Temp.cs",
@@ -155,39 +155,36 @@
               "RelativeDocumentMoniker": "Myclass\\User.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Myclass\\User.cs",
               "RelativeToolTip": "Myclass\\User.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAxwCIAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T05:02:34.086Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Packet.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Myclass\\Packet.cs",
               "RelativeDocumentMoniker": "Myclass\\Packet.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Myclass\\Packet.cs",
               "RelativeToolTip": "Myclass\\Packet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAPAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T05:02:44.583Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Myclass\\Team.cs",
               "RelativeDocumentMoniker": "Myclass\\Team.cs",
               "ToolTip": "C:\\Users\\ijh1382\\source\\repos\\GroupTaskManager\\Myclass\\Team.cs",
               "RelativeToolTip": "Myclass\\Team.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAwwCkAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-05T07:28:21.568Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             }
           ]
         }

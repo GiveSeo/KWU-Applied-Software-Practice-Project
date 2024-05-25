@@ -96,7 +96,13 @@ namespace Server
                     switch (p.type)
                     {
                         case PacketType.LOGOUT:
-                            Console.WriteLine("로그아웃");
+                            Packet logout = new Packet(PacketType.OK);
+                            writebuffer  = Packet.Serialize(logout);
+                            stream.Write(writebuffer, 0, writebuffer.Length);
+                            stream.Flush();
+                            stream.Close();
+                            client.Close();
+                            Console.WriteLine("연결 종료");
                             return;
                         case PacketType.SIGNUP:
                             User signup_user = (User)p;
@@ -108,6 +114,7 @@ namespace Server
                             stream.Flush();
                             stream.Close();
                             client.Close();
+                            Console.WriteLine("회원가입 완료");
                             return;
                         case PacketType.LOGIN:
                             User login_user = (User)p;
@@ -137,14 +144,36 @@ namespace Server
                                 stream.Write(writebuffer, 0, writebuffer.Length);
                                 stream.Flush();
                             }
+                            Console.WriteLine("로그인 완료");
                             break;
                         default:
                             break;
                     }
                 }
-                catch (Exception e)
+                catch(IOException e)
                 {
-                    Console.WriteLine("{0}으로 인해 현재 스레드를 종료합니다...", e.Message);
+                    Console.WriteLine("연결 끊어짐");
+                    stream.Close();
+                    client.Close();
+                    return;
+                }
+                catch(SocketException e)
+                {
+                    Console.WriteLine("연결 끊어짐");
+                    stream.Close();
+                    client.Close();
+                    return;
+                }
+                catch(ObjectDisposedException e)
+                {
+                    Console.WriteLine("삭제된 Object에 접근함");
+                    stream.Close();
+                    client.Close();
+                    return;
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("{0}으로 인해 현재 스레드를 종료합니다...", e.ToString());
                     stream.Close();
                     client.Close();
                     return;
