@@ -34,6 +34,8 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.textBox_Whisper = new System.Windows.Forms.TextBox();
             this.label_Whisper = new System.Windows.Forms.Label();
+            this.LoadLogButton = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // ChatTextBox
@@ -55,9 +57,9 @@
             // 
             // SendButton
             // 
-            this.SendButton.Location = new System.Drawing.Point(544, 165);
+            this.SendButton.Location = new System.Drawing.Point(544, 258);
             this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(144, 143);
+            this.SendButton.Size = new System.Drawing.Size(144, 50);
             this.SendButton.TabIndex = 3;
             this.SendButton.Text = "Send";
             this.SendButton.UseVisualStyleBackColor = true;
@@ -88,11 +90,26 @@
             this.label_Whisper.TabIndex = 6;
             this.label_Whisper.Text = "귓속말";
             // 
+            // LoadLogButton
+            // 
+            this.LoadLogButton.Location = new System.Drawing.Point(547, 204);
+            this.LoadLogButton.Name = "LoadLogButton";
+            this.LoadLogButton.Size = new System.Drawing.Size(141, 48);
+            this.LoadLogButton.TabIndex = 7;
+            this.LoadLogButton.Text = "ChatLog";
+            this.LoadLogButton.UseVisualStyleBackColor = true;
+            this.LoadLogButton.Click += new System.EventHandler(this.LoadLogButton_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // Temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 320);
+            this.Controls.Add(this.LoadLogButton);
             this.Controls.Add(this.label_Whisper);
             this.Controls.Add(this.textBox_Whisper);
             this.Controls.Add(this.label_Name);
@@ -116,5 +133,7 @@
         private System.Windows.Forms.Label label_Name;
         private System.Windows.Forms.TextBox textBox_Whisper;
         private System.Windows.Forms.Label label_Whisper;
+        private System.Windows.Forms.Button LoadLogButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }

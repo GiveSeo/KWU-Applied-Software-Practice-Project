@@ -118,42 +118,42 @@ namespace Server
             }
         }
 
-        static void chat()
+        static void chat() // 채팅 서버 스레드 함수
         {
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 13002);
             listener.Start();
             Console.WriteLine("chat thread start");
             while (true)
             {
-                TcpClient client = listener.AcceptTcpClient();
-                NetworkStream stream = client.GetStream();
+                TcpClient client = listener.AcceptTcpClient(); // 클라이언트 기다림
+                NetworkStream stream = client.GetStream(); // 클라이언트 스트림 설정
                 StreamReader reader = new StreamReader(stream);
                 StreamWriter writer = new StreamWriter(stream) { AutoFlush = true };
-                string name = reader.ReadLine();
-                chatClients.Add((client, name));
+                string name = reader.ReadLine(); // 클라이언트 사용자의 이름 받음
+                chatClients.Add((client, name)); // 채팅 중인 사용자 목록에 추가
                 Console.WriteLine("new chat client connected: " + name);
                 Thread chatThread = new Thread(() => handleChatClient(client));
-                chatThread.Start();
+                chatThread.Start(); // 클라이언트 채팅 핸들러 시작
             }
         }
 
-        static void handleChatClient(TcpClient client)
+        static void handleChatClient(TcpClient client) // 채팅 핸들러 함수
         {
             NetworkStream stream = client.GetStream();
             StreamReader reader = new StreamReader(stream);
             while (true)
             {
-                string message = reader.ReadLine();
-                string whisper = reader.ReadLine();
+                string message = reader.ReadLine(); // 클라이언트에게 메시지 받음
+                string whisper = reader.ReadLine(); // 클라이언트에게 귓속말 상대 받음
                 if (message == null) break;
                 Console.WriteLine("received message: " + message);
-                if (string.IsNullOrEmpty(whisper))
+                if (string.IsNullOrEmpty(whisper)) // 귓속말 상대가 없으면
                 {
                     broadcastMessage(message, client); // 메시지를 모든 클라이언트에게 전송
                 }
-                else
+                else // 귓속말 상대가 있다면
                 {
-                    WhisperMessage(message, client, whisper);
+                    WhisperMessage(message, client, whisper); // 메시지를 귓속말 상대에게만 전송
                 }
             }
             chatClients.RemoveAll(c => c.client == client);
@@ -164,25 +164,26 @@ namespace Server
         static void broadcastMessage(string message, TcpClient sender)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(message);
-            foreach (var (client, _) in chatClients)
+            foreach (var (client, _) in chatClients) // 리스트의 각 클라이언트 마다
             {
                 NetworkStream stream = client.GetStream();
-                stream.Write(buffer, 0, buffer.Length);
+                stream.Write(buffer, 0, buffer.Length); // 메시지 전송
             }
         }
 
+        // 메시지를 귓속말 상대에게만 전송하는 메소드
         static void WhisperMessage(string message, TcpClient sender, string whisper)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(whisper + "<-" + message);
-            foreach (var (client, username) in chatClients)
+            foreach (var (client, username) in chatClients) // 이름 비교로 상대를 탐색
             {
-                if (username.Equals(whisper, StringComparison.OrdinalIgnoreCase))
+                if (username.Equals(whisper, StringComparison.OrdinalIgnoreCase)) // 찾으면 전송
                 {
-                    try
+                    try // 둘에게만 메시지가 다시 전송됨
                     {
-                        NetworkStream stream1 = client.GetStream();
+                        NetworkStream stream1 = client.GetStream(); // 귓속말 상대
                         stream1.Write(buffer, 0, buffer.Length);
-                        NetworkStream stream2 = sender.GetStream();
+                        NetworkStream stream2 = sender.GetStream(); // 메시지 송신자
                         stream2.Write(buffer, 0, buffer.Length);
                         Console.WriteLine($"Whispered to {username}: {message}");
                     }
