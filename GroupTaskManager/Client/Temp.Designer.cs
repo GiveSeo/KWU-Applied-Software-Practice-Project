@@ -36,6 +36,8 @@
             this.label_Whisper = new System.Windows.Forms.Label();
             this.LoadLogButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.label_Team = new System.Windows.Forms.Label();
+            this.textBox_Team = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ChatTextBox
@@ -80,6 +82,7 @@
             this.textBox_Whisper.Name = "textBox_Whisper";
             this.textBox_Whisper.Size = new System.Drawing.Size(144, 25);
             this.textBox_Whisper.TabIndex = 5;
+            this.textBox_Whisper.TextChanged += new System.EventHandler(this.textBox_Whisper_TextChanged);
             // 
             // label_Whisper
             // 
@@ -104,11 +107,30 @@
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
+            // label_Team
+            // 
+            this.label_Team.AutoSize = true;
+            this.label_Team.Location = new System.Drawing.Point(544, 51);
+            this.label_Team.Name = "label_Team";
+            this.label_Team.Size = new System.Drawing.Size(52, 15);
+            this.label_Team.TabIndex = 8;
+            this.label_Team.Text = "팀에게";
+            // 
+            // textBox_Team
+            // 
+            this.textBox_Team.Location = new System.Drawing.Point(544, 69);
+            this.textBox_Team.Name = "textBox_Team";
+            this.textBox_Team.Size = new System.Drawing.Size(144, 25);
+            this.textBox_Team.TabIndex = 9;
+            this.textBox_Team.TextChanged += new System.EventHandler(this.textBox_Team_TextChanged);
+            // 
             // Temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 320);
+            this.Controls.Add(this.textBox_Team);
+            this.Controls.Add(this.label_Team);
             this.Controls.Add(this.LoadLogButton);
             this.Controls.Add(this.label_Whisper);
             this.Controls.Add(this.textBox_Whisper);
@@ -135,5 +157,7 @@
         private System.Windows.Forms.Label label_Whisper;
         private System.Windows.Forms.Button LoadLogButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Label label_Team;
+        private System.Windows.Forms.TextBox textBox_Team;
     }
 }

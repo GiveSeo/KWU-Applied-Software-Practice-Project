@@ -26,5 +26,6 @@ namespace Myclass
         public string get_password() { return password; }
         public string get_name() { return name; }
         public string get_all() { return name + "," + id + ',' + password; }
+        public List<int> get_teamids() { return cur_teamids; } // 속한 팀 리스트 불러옴
     }
 }

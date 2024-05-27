@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|c:\\users\\crime\\source\\repos\\teamproject\\grouptaskmanager\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC11F312-B4FD-4142-8F5E-158BBFB91BFF}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,12 +23,8 @@
       "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|c:\\users\\crime\\source\\repos\\teamproject\\grouptaskmanager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\client\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\client\\temp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDEB3FC9-AD91-463B-A643-F86B0BF1F181}|Client\\Client.csproj|solutionrelative:client\\temp.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{666E2566-3BB0-4C31-931C-984A0536B319}|Myclass\\Myclass.csproj|solutionrelative:myclass\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,17 +54,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
               "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAABLAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAuwLYAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T17:31:56.019Z",
               "IsPinned": true,
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Login.cs",
               "RelativeDocumentMoniker": "Client\\Login.cs",
@@ -81,12 +81,11 @@
               "ViewState": "AQIAACUAAAAAAAAAAAA6wDIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T07:33:45.066Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Login.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Login.cs",
               "RelativeDocumentMoniker": "Client\\Login.cs",
@@ -94,12 +93,11 @@
               "RelativeToolTip": "Client\\Login.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T04:48:42.092Z",
-              "IsPinned": true,
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "SignUp.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\SignUp.cs",
               "RelativeDocumentMoniker": "Client\\SignUp.cs",
@@ -112,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SignUp.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\SignUp.cs",
               "RelativeDocumentMoniker": "Client\\SignUp.cs",
@@ -124,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Temp.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeDocumentMoniker": "Client\\Temp.cs",
@@ -137,13 +135,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Temp.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeDocumentMoniker": "Client\\Temp.cs",
               "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Temp.cs",
               "RelativeToolTip": "Client\\Temp.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwJ0AAAARAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAADwv6UAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T06:03:59.825Z",
               "IsPinned": true,
@@ -151,21 +149,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Myclass\\User.cs",
               "RelativeDocumentMoniker": "Myclass\\User.cs",
               "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Myclass\\User.cs",
               "RelativeToolTip": "Myclass\\User.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAlAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwBwAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T05:02:34.086Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Packet.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Myclass\\Packet.cs",
               "RelativeDocumentMoniker": "Myclass\\Packet.cs",
@@ -206,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Myclass\\Team.cs",
               "RelativeDocumentMoniker": "Myclass\\Team.cs",
@@ -214,12 +211,11 @@
               "RelativeToolTip": "Myclass\\Team.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T07:28:21.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T07:28:21.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Temp.Designer.cs",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\GroupTaskManager\\Client\\Temp.Designer.cs",
               "RelativeDocumentMoniker": "Client\\Temp.Designer.cs",
@@ -227,7 +223,8 @@
               "RelativeToolTip": "Client\\Temp.Designer.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T13:00:01.292Z"
+              "WhenOpened": "2024-05-04T13:00:01.292Z",
+              "EditorCaption": ""
             }
           ]
         }

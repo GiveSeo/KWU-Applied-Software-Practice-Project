@@ -70,7 +70,9 @@ namespace Client
                 reader = new StreamReader(stream);
                 writer = new StreamWriter(stream);
 
-                writer.WriteLine(user_name); // 유저 이름을 채팅 서버로 보냄
+                writer.WriteLine(user_id); // 유저 이름을 채팅 서버로 보냄
+                writer.Flush();
+                writer.WriteLine(user_pw); // 유저 패스워드를 채팅 서버로 보냄
                 writer.Flush();
 
                 // 서버와 연결되었다는 메시지를 채팅 로그에 표시
@@ -94,6 +96,8 @@ namespace Client
                 stream.Write(buffer1, 0, buffer1.Length); // 이름 포함 메시지를 전달
                 byte[] buffer2 = Encoding.UTF8.GetBytes(textBox_Whisper.Text + Environment.NewLine);
                 stream.Write(buffer2, 0, buffer2.Length); // 귓속말 사용자도 전달, 없어도 보냄
+                byte[] buffer3 = Encoding.UTF8.GetBytes(textBox_Team.Text + Environment.NewLine);
+                stream.Write(buffer3, 0, buffer3.Length); //팀 아이디도 전달, 없어도 보냄
                 MessageTextBox.Clear();
             }
         }
@@ -157,6 +161,16 @@ namespace Client
                     MessageBox.Show(fileContent, "Chat Log", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void textBox_Team_TextChanged(object sender, EventArgs e)
+        {
+            textBox_Whisper.Text = string.Empty;
+        }
+
+        private void textBox_Whisper_TextChanged(object sender, EventArgs e)
+        {
+            textBox_Team.Text = string.Empty;
         }
     }
 }

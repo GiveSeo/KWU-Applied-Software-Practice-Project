@@ -18,7 +18,7 @@ namespace Server
     {
         static List<User> userlist = new List<User>();
         static List<User> cur_userlist = new List<User>();
-        static List<(TcpClient client, string name)> chatClients = new List<(TcpClient, string)>(); // 채팅 중인 유저 리스트
+        static List<(TcpClient client, User user)> chatClients = new List<(TcpClient, User)>(); // 채팅 중인 유저 리스트
 
         static void load_userlist()
         {
@@ -129,9 +129,21 @@ namespace Server
                 NetworkStream stream = client.GetStream(); // 클라이언트 스트림 설정
                 StreamReader reader = new StreamReader(stream);
                 StreamWriter writer = new StreamWriter(stream) { AutoFlush = true };
-                string name = reader.ReadLine(); // 클라이언트 사용자의 이름 받음
-                chatClients.Add((client, name)); // 채팅 중인 사용자 목록에 추가
-                Console.WriteLine("new chat client connected: " + name);
+                string id = reader.ReadLine(); // 클라이언트 사용자의 id 받음
+                string pw = reader.ReadLine(); // 클라이언트 사용자의 pw 받음
+                User uu = null;
+                foreach (User u in cur_userlist)
+                {
+                    if (id.Equals(u.get_id()))
+                    {
+                        if (pw.Equals(u.get_password()))
+                        {
+                            uu = u;
+                        }
+                    }
+                }
+                chatClients.Add((client, uu)); // 채팅 중인 사용자 목록에 추가
+                Console.WriteLine("new chat client connected: " + uu.get_name());
                 Thread chatThread = new Thread(() => handleChatClient(client));
                 chatThread.Start(); // 클라이언트 채팅 핸들러 시작
             }
@@ -145,13 +157,30 @@ namespace Server
             {
                 string message = reader.ReadLine(); // 클라이언트에게 메시지 받음
                 string whisper = reader.ReadLine(); // 클라이언트에게 귓속말 상대 받음
+                string team_id = reader.ReadLine(); // 클라이언트에게 팀 아이디 받음
                 if (message == null) break;
                 Console.WriteLine("received message: " + message);
-                if (string.IsNullOrEmpty(whisper)) // 귓속말 상대가 없으면
+                if (string.IsNullOrEmpty(whisper) && string.IsNullOrEmpty(team_id)) // 귓속말 상대와 팀이 없으면
                 {
                     broadcastMessage(message, client); // 메시지를 모든 클라이언트에게 전송
                 }
-                else // 귓속말 상대가 있다면
+                else if (!string.IsNullOrEmpty(team_id) && string.IsNullOrEmpty(whisper)) // 팀 아이디만 있다면
+                {
+                    try
+                    {
+                        int number = Convert.ToInt32(team_id);
+                        TeamMessage(message, client, number);
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("유효한 정수 형식이 아닙니다.");
+                    }
+                    catch (OverflowException)
+                    {
+                        Console.WriteLine("정수 범위를 초과했습니다.");
+                    }
+                }
+                else if(string.IsNullOrEmpty(team_id) && !string.IsNullOrEmpty(whisper))// 귓속말 상대만 있다면
                 {
                     WhisperMessage(message, client, whisper); // 메시지를 귓속말 상대에게만 전송
                 }
@@ -175,8 +204,9 @@ namespace Server
         static void WhisperMessage(string message, TcpClient sender, string whisper)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(whisper + "<-" + message);
-            foreach (var (client, username) in chatClients) // 이름 비교로 상대를 탐색
+            foreach (var (client, user) in chatClients) // 이름 비교로 상대를 탐색
             {
+                string username = user.get_name();
                 if (username.Equals(whisper, StringComparison.OrdinalIgnoreCase)) // 찾으면 전송
                 {
                     try // 둘에게만 메시지가 다시 전송됨
@@ -191,6 +221,22 @@ namespace Server
                     {
                         Console.WriteLine($"Error sending whisper to {username}: {ex.Message}");
                     }
+                }
+            }
+        }
+
+        // 같은 팀에게만 메시지를 전달하는 메소드
+        static void TeamMessage(string message, TcpClient sender, int team_id)
+        {
+           string tid = team_id.ToString();
+            byte[] buffer = Encoding.UTF8.GetBytes(tid + "<-" + message);
+            foreach (var (client, user) in chatClients) // 유저마다 팀에 속해 있나 확인
+            {
+                List<int> teamlist = user.get_teamids();
+                if (teamlist.Contains(team_id)) // 팀에 있으면 전송
+                {
+                    NetworkStream stream = client.GetStream();
+                    stream.Write(buffer, 0, buffer.Length); // 메시지 전송
                 }
             }
         }
