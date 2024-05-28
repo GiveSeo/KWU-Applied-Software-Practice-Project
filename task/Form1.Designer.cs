@@ -67,17 +67,17 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroListView2 = new MetroFramework.Controls.MetroListView();
+            this.Goallsv = new MetroFramework.Controls.MetroListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.Teamlsv = new MetroFramework.Controls.MetroListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.btn_Delete = new MetroFramework.Controls.MetroTile();
+            this.btn_Manage = new MetroFramework.Controls.MetroTile();
+            this.btn_Create = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -90,12 +90,12 @@
             this.metroPanel1.Controls.Add(this.metroTabControl1);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroListView2);
-            this.metroPanel1.Controls.Add(this.metroListView1);
+            this.metroPanel1.Controls.Add(this.Goallsv);
+            this.metroPanel1.Controls.Add(this.Teamlsv);
             this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.Controls.Add(this.metroTile3);
-            this.metroPanel1.Controls.Add(this.metroTile2);
-            this.metroPanel1.Controls.Add(this.metroTile1);
+            this.metroPanel1.Controls.Add(this.btn_Delete);
+            this.metroPanel1.Controls.Add(this.btn_Manage);
+            this.metroPanel1.Controls.Add(this.btn_Create);
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -115,7 +115,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(424, 141);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1267, 799);
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
@@ -597,21 +597,21 @@
             this.metroLabel2.Text = "팀 목록";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // metroListView2
+            // Goallsv
             // 
-            this.metroListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Goallsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5});
-            this.metroListView2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView2.FullRowSelect = true;
-            this.metroListView2.Location = new System.Drawing.Point(75, 590);
-            this.metroListView2.Name = "metroListView2";
-            this.metroListView2.OwnerDraw = true;
-            this.metroListView2.Size = new System.Drawing.Size(270, 350);
-            this.metroListView2.TabIndex = 8;
-            this.metroListView2.UseCompatibleStateImageBehavior = false;
-            this.metroListView2.UseSelectable = true;
-            this.metroListView2.View = System.Windows.Forms.View.Details;
+            this.Goallsv.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Goallsv.FullRowSelect = true;
+            this.Goallsv.Location = new System.Drawing.Point(75, 590);
+            this.Goallsv.Name = "Goallsv";
+            this.Goallsv.OwnerDraw = true;
+            this.Goallsv.Size = new System.Drawing.Size(270, 350);
+            this.Goallsv.TabIndex = 8;
+            this.Goallsv.UseCompatibleStateImageBehavior = false;
+            this.Goallsv.UseSelectable = true;
+            this.Goallsv.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader4
             // 
@@ -622,22 +622,22 @@
             this.columnHeader5.Text = "목표";
             this.columnHeader5.Width = 205;
             // 
-            // metroListView1
+            // Teamlsv
             // 
-            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Teamlsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(75, 179);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(270, 350);
-            this.metroListView1.TabIndex = 7;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
-            this.metroListView1.View = System.Windows.Forms.View.Details;
+            this.Teamlsv.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Teamlsv.FullRowSelect = true;
+            this.Teamlsv.Location = new System.Drawing.Point(75, 179);
+            this.Teamlsv.Name = "Teamlsv";
+            this.Teamlsv.OwnerDraw = true;
+            this.Teamlsv.Size = new System.Drawing.Size(270, 350);
+            this.Teamlsv.TabIndex = 7;
+            this.Teamlsv.UseCompatibleStateImageBehavior = false;
+            this.Teamlsv.UseSelectable = true;
+            this.Teamlsv.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -664,35 +664,38 @@
             this.metroLabel1.Text = "명언 위치";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroTile3
+            // btn_Delete
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(411, 48);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(120, 45);
-            this.metroTile3.TabIndex = 4;
-            this.metroTile3.Text = "metroTile3";
-            this.metroTile3.UseSelectable = true;
+            this.btn_Delete.ActiveControl = null;
+            this.btn_Delete.Location = new System.Drawing.Point(411, 48);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(120, 45);
+            this.btn_Delete.TabIndex = 4;
+            this.btn_Delete.Text = "팀 제거";
+            this.btn_Delete.UseSelectable = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // metroTile2
+            // btn_Manage
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(234, 48);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(120, 44);
-            this.metroTile2.TabIndex = 3;
-            this.metroTile2.Text = "metroTile2";
-            this.metroTile2.UseSelectable = true;
+            this.btn_Manage.ActiveControl = null;
+            this.btn_Manage.Location = new System.Drawing.Point(234, 48);
+            this.btn_Manage.Name = "btn_Manage";
+            this.btn_Manage.Size = new System.Drawing.Size(120, 44);
+            this.btn_Manage.TabIndex = 3;
+            this.btn_Manage.Text = "팀 관리";
+            this.btn_Manage.UseSelectable = true;
+            this.btn_Manage.Click += new System.EventHandler(this.btn_Manage_Click);
             // 
-            // metroTile1
+            // btn_Create
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(75, 48);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(120, 44);
-            this.metroTile1.TabIndex = 2;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.UseSelectable = true;
+            this.btn_Create.ActiveControl = null;
+            this.btn_Create.Location = new System.Drawing.Point(75, 48);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(120, 44);
+            this.btn_Create.TabIndex = 2;
+            this.btn_Create.Text = "팀 생성";
+            this.btn_Create.UseSelectable = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // Form1
             // 
@@ -719,9 +722,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile btn_Delete;
+        private MetroFramework.Controls.MetroTile btn_Manage;
+        private MetroFramework.Controls.MetroTile btn_Create;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTextBox textBoxOutput;
@@ -733,10 +736,10 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroListView metroListView2;
+        private MetroFramework.Controls.MetroListView Goallsv;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private MetroFramework.Controls.MetroListView metroListView1;
+        private MetroFramework.Controls.MetroListView Teamlsv;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

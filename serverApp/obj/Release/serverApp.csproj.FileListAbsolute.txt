@@ -1,0 +1,10 @@
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.exe.config
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.exe
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.pdb
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\ClassLibrary1.dll
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\ClassLibrary1.pdb
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.AssemblyReference.cache
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.CoreCompileInputs.cache
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.Up2Date
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.exe
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.pdb
