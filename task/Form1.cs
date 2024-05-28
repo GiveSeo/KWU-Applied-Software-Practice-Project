@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Bot.Connector.DirectLine;
 
 
 namespace task
@@ -15,9 +16,13 @@ namespace task
     public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         int month, year;
+        private DirectLineClient _directLineClient;
+        private string _conversationId;
+        private string _watermark;
         public Form1()
         {
             InitializeComponent();
+            InitializeBotConnection();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,6 +31,19 @@ namespace task
 
             DateTime today = DateTime.Now;
             metroLabel1.Text = string.Format("{0:F}", today);
+        }
+
+        private void InitializeBotConnection()
+        {
+            string directLineSecret = "ggejVBnjLpc.Joq2vKXTjZzBL4vUfoZZiFYc5P4BlWGqu9-2lStnnLg";
+            _directLineClient = new DirectLineClient(directLineSecret);
+            StartConversation();
+        }
+
+        private async void StartConversation()
+        {
+            var conversation = await _directLineClient.Conversations.StartConversationAsync();
+            _conversationId = conversation.ConversationId;
         }
 
         private void metroLabel7_Click(object sender, EventArgs e)
@@ -87,6 +105,52 @@ namespace task
                 ucday.days(i);
                 flowLayoutPanel1.Controls.Add(ucday);
             }
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void buttonSend_Click(object sender, EventArgs e)
+        {
+            string userInput = textBoxInput.Text;
+            if (!string.IsNullOrWhiteSpace(userInput))
+            {
+                textBoxOutput.AppendText("\n");
+                textBoxOutput.AppendText("User: " + userInput + Environment.NewLine);
+                await SendMessageToBot(userInput);
+                textBoxInput.Clear();
+            }
+        }
+
+        private async Task SendMessageToBot(string message)
+        {
+            if (string.IsNullOrWhiteSpace(message)) return;
+
+            var activity = new Activity
+            {
+                From = new ChannelAccount("User"),
+                Text = message,
+                Type = ActivityTypes.Message
+            };
+
+            await _directLineClient.Conversations.PostActivityAsync(_conversationId, activity);
+
+            await ReceiveMessagesFromBot();
+        }
+
+        private async Task ReceiveMessagesFromBot()
+        {
+            var activitySet = await _directLineClient.Conversations.GetActivitiesAsync(_conversationId, _watermark);
+            var activities = activitySet.Activities;
+            _watermark = activitySet.Watermark;
+
+            foreach (var activity in activities.Where(a => a.From.Id != "User"))
+            {
+                textBoxOutput.AppendText("Bot: " + activity.Text + Environment.NewLine);
+            }
+
         }
 
         private void metroButton6_Click(object sender, EventArgs e)

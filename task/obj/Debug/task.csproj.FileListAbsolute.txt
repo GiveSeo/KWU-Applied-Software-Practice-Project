@@ -15,3 +15,7 @@ C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.csproj.Up2Date
 C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.exe
 C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.pdb
 C:\Users\namgihyeon\sourcecode\task\task\obj\Debug\task.UserControlblank.resources
+C:\Users\namgihyeon\sourcecode\TASK\task\bin\Debug\Microsoft.Bot.Connector.DirectLine.dll
+C:\Users\namgihyeon\sourcecode\TASK\task\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\namgihyeon\sourcecode\TASK\task\bin\Debug\Newtonsoft.Json.dll
+C:\Users\namgihyeon\sourcecode\TASK\task\bin\Debug\Newtonsoft.Json.xml
