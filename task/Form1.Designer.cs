@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.btnDeleteGoal = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.buttonSend = new MetroFramework.Controls.MetroButton();
@@ -50,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroListView3 = new MetroFramework.Controls.MetroListView();
+            this.Memlsv = new MetroFramework.Controls.MetroListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -87,6 +88,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.btnDeleteGoal);
             this.metroPanel1.Controls.Add(this.metroTabControl1);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroLabel2);
@@ -107,6 +109,17 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // btnDeleteGoal
+            // 
+            this.btnDeleteGoal.ActiveControl = null;
+            this.btnDeleteGoal.Location = new System.Drawing.Point(561, 48);
+            this.btnDeleteGoal.Name = "btnDeleteGoal";
+            this.btnDeleteGoal.Size = new System.Drawing.Size(136, 45);
+            this.btnDeleteGoal.TabIndex = 0;
+            this.btnDeleteGoal.Text = "목표 제거";
+            this.btnDeleteGoal.UseSelectable = true;
+            this.btnDeleteGoal.Click += new System.EventHandler(this.btnDeleteGoal_Click);
             // 
             // metroTabControl1
             // 
@@ -272,7 +285,7 @@
             this.metroTabPage2.Controls.Add(this.label3);
             this.metroTabPage2.Controls.Add(this.label2);
             this.metroTabPage2.Controls.Add(this.label1);
-            this.metroTabPage2.Controls.Add(this.metroListView3);
+            this.metroTabPage2.Controls.Add(this.Memlsv);
             this.metroTabPage2.Controls.Add(this.metroLabel7);
             this.metroTabPage2.Controls.Add(this.metroLabel6);
             this.metroTabPage2.Controls.Add(this.metroLabel5);
@@ -397,21 +410,21 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "SUNDAY";
             // 
-            // metroListView3
+            // Memlsv
             // 
-            this.metroListView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Memlsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7});
-            this.metroListView3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView3.FullRowSelect = true;
-            this.metroListView3.Location = new System.Drawing.Point(988, 71);
-            this.metroListView3.Name = "metroListView3";
-            this.metroListView3.OwnerDraw = true;
-            this.metroListView3.Size = new System.Drawing.Size(252, 389);
-            this.metroListView3.TabIndex = 12;
-            this.metroListView3.UseCompatibleStateImageBehavior = false;
-            this.metroListView3.UseSelectable = true;
-            this.metroListView3.View = System.Windows.Forms.View.Details;
+            this.Memlsv.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Memlsv.FullRowSelect = true;
+            this.Memlsv.Location = new System.Drawing.Point(988, 71);
+            this.Memlsv.Name = "Memlsv";
+            this.Memlsv.OwnerDraw = true;
+            this.Memlsv.Size = new System.Drawing.Size(252, 389);
+            this.Memlsv.TabIndex = 12;
+            this.Memlsv.UseCompatibleStateImageBehavior = false;
+            this.Memlsv.UseSelectable = true;
+            this.Memlsv.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader6
             // 
@@ -746,7 +759,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton buttonSend;
         private MetroFramework.Controls.MetroTextBox textBoxInput;
-        private MetroFramework.Controls.MetroListView metroListView3;
+        private MetroFramework.Controls.MetroListView Memlsv;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -771,6 +784,7 @@
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroButton metroButton6;
         private System.Windows.Forms.Label label8;
+        private MetroFramework.Controls.MetroTile btnDeleteGoal;
     }
 }
 

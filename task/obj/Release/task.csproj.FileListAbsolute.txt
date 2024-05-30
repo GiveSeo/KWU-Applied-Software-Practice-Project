@@ -22,3 +22,4 @@ C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\task\obj\
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\task\obj\Release\task.exe
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\task\obj\Release\task.pdb
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\task\obj\Release\task.TeamCreateForm.resources
+C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\task\obj\Release\task.TeamManageForm.resources

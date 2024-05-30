@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Myclass;
 
 namespace task
 {
     public partial class TeamCreateForm : MetroFramework.Forms.MetroForm
     {
-        public delegate void DataPassedHandler(int teamid, List<int> teamMemId);
+        public User admin;
+        public delegate void DataPassedHandler(Team t);
         public event DataPassedHandler DataPassed;
-        List<int> teamMemId = new List<int>();
-        public TeamCreateForm()
+        List<string> teamMemId = new List<string>();
+        public TeamCreateForm(User u)
         {
+            admin = u;
             InitializeComponent();
         }
 
@@ -38,10 +41,16 @@ namespace task
             int teamid = Int32.Parse(txtTeamId.Text);
             foreach (ListViewItem s in lsvMemId.Items)
             {
-                teamMemId.Add(Int32.Parse(s.SubItems[0].Text));
+                teamMemId.Add((s.SubItems[0].Text));
             }
-            DataPassed?.Invoke(Int32.Parse(txtTeamId.Text), teamMemId);
+            Team t = new Team(Int32.Parse(txtTeamId.Text), admin, txtPname.Text, teamMemId); //new team Create
+            DataPassed?.Invoke(t);
             this.Close();
+        }
+
+        private void lsvMemId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

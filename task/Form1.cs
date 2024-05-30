@@ -9,6 +9,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Microsoft.Bot.Connector.DirectLine;
 using Myclass;
 
@@ -22,16 +23,22 @@ namespace task
         private string _conversationId;
         private string _watermark;
         TcpClient client;
-        private NetworkStream m_networtstream;
+        private NetworkStream m_networkstream;
         User cur_user;
         private byte[] sendBuffer = new byte[1024 * 4];
         private byte[] readBuffer = new byte[1024 * 4];
-        public Form1(TcpClient t, User cur_user)
+        List<Team> teams = new List<Team>();
+        List<User> users = new List<User>();
+        public Form1(TcpClient t,NetworkStream m_networkstream, User cur_user, List<User> users,List<Team> teams)
         {
             InitializeComponent();
             InitializeBotConnection();
             client = t;
+            this.m_networkstream = m_networkstream;
             this.cur_user = cur_user;
+            this.users = users;
+            this.teams = teams;
+            list_view_set();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -161,44 +168,91 @@ namespace task
             }
 
         }
+        private void list_view_set()
+        {
+            Teamlsv.Items.Clear();
+            Memlsv.Items.Clear();
+            Goallsv.Items.Clear();
 
+            foreach(Team t in teams) // teamlsv add
+            {
+                ListViewItem s = new ListViewItem(t.GetID().ToString());
+                s.SubItems.Add(t.GetProject());
+                s.SubItems.Add(t.GetPeople().ToString());
+                Teamlsv.Items.Add(s);
+            }
+            foreach (Team t in teams)
+            {
+                foreach(string s in t.GetGoals())// goallsv add
+                {
+                    ListViewItem s2 = new ListViewItem(t.GetID().ToString());
+                    s2.SubItems.Add(s);
+                    Goallsv.Items.Add(s2);
+                }
+            }
+            foreach (Team t in teams)
+            {
+               foreach (string id in t.GetMemid())// goallsv add
+               {
+                    ListViewItem s = new ListViewItem(t.GetID().ToString());
+                    s.SubItems.Add(id.ToString());
+                    Memlsv.Items.Add(s);
+               }
+            }
+        }
         private void btn_Manage_Click(object sender, EventArgs e)
         {
-
+            TeamManageForm tmf = new TeamManageForm(teams);
+            tmf.DataPassed += new TeamManageForm.DataPassedHandler(OnManageDataPassed);
+            tmf.Show();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-
-        }
-        private void OnDataPassed(int teamid, List<int> teamMemId)
-        {/*
-            ListViewItem s = new ListViewItem(teamid.ToString());
-            s.SubItems.Add(teamMemId.Count.ToString());
-            TeamListView.Items.Add(s);
-            Team new_team = new Team(teamid, null, null);
-            new_team.instruction = 1;
-            teams.Add(new_team);
-            this.m_client = new TcpClient();
-            try
-            {
-                this.m_client.Connect("127.0.0.1", 7777);
-            }
-            catch
-            {
-                MessageBox.Show("서버와의 연결이 불안정 합니다.");
+            if (Teamlsv.FocusedItem == null)
                 return;
+            int del_team_id = Int32.Parse(Teamlsv.FocusedItem.SubItems[0].Text);
+            Team del=null;
+            foreach(Team t in teams)
+            {
+                if (t.GetID() == del_team_id)
+                    del = t;
             }
-            this.m_bConnect = true;
-            this.m_networtstream = this.m_client.GetStream();
-            new_team.type = (int)PacketType.NOTHING;
-            Packet.Serialize(new_team).CopyTo(this.sendBuffer, 0);
-            this.Send();*/
+            this.m_networkstream = this.client.GetStream();
+            del.type = PacketType.DELETE;
+            Packet.Serialize(del).CopyTo(this.sendBuffer, 0);
+            this.Send();
+            MessageBox.Show("팀 삭제");
+            this.m_networkstream.Flush();
+            teams.Remove(del);
+            list_view_set();
+        }
+        private void OnDataPassed(Team t)
+        {
+            teams.Add(t);
+            list_view_set();
+
+            this.m_networkstream = this.client.GetStream();
+            t.type = PacketType.ADD;
+            Packet.Serialize(t).CopyTo(this.sendBuffer, 0);
+            this.Send();
+            MessageBox.Show("팀 보내기");
+            this.m_networkstream.Flush();
+        }
+        private void OnManageDataPassed(Team t)
+        {
+            list_view_set();
+            this.m_networkstream = this.client.GetStream();
+            t.type = PacketType.EDIT;
+            Packet.Serialize(t).CopyTo(this.sendBuffer, 0);
+            this.Send();
+            MessageBox.Show("팀 수정 보내기");
+            this.m_networkstream.Flush();
         }
         public void Send()
         {
-            this.m_networtstream.Write(this.sendBuffer, 0, this.sendBuffer.Length);
-            this.m_networtstream.Flush();
+            this.m_networkstream.Write(this.sendBuffer, 0, this.sendBuffer.Length);
+            this.m_networkstream.Flush();
 
             for (int i = 0; i < 1024 * 4; i++)
             {
@@ -207,9 +261,36 @@ namespace task
         }
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            TeamCreateForm tcf = new TeamCreateForm();
+            TeamCreateForm tcf = new TeamCreateForm(cur_user);
             tcf.DataPassed += new TeamCreateForm.DataPassedHandler(OnDataPassed);
             tcf.Show();
+        }
+
+        private void btnDeleteGoal_Click(object sender, EventArgs e)
+        {
+            if (Goallsv.FocusedItem == null)
+                return;
+            int del_team_id = Int32.Parse(Goallsv.FocusedItem.SubItems[0].Text);
+            string del_goal = Goallsv.FocusedItem.SubItems[1].Text;
+            Team del = null;
+            foreach (Team t in teams)
+            {
+                if (t.GetID() == del_team_id)
+                    del = t;
+            }
+            for(int i=del.GetGoals().Count - 1; i >= 0; i--)
+            {
+                if (del_goal == del.GetGoals()[i])
+                    del.GetGoals().RemoveAt(i);
+            }
+            this.m_networkstream = this.client.GetStream();
+            del.type = PacketType.EDIT;
+            Packet.Serialize(del).CopyTo(this.sendBuffer, 0);
+            this.Send();
+            MessageBox.Show("팀 삭제");
+            this.m_networkstream.Flush();
+            teams.Remove(del);
+            list_view_set();
         }
 
         private void metroButton6_Click(object sender, EventArgs e)

@@ -15,7 +15,9 @@ namespace Myclass
         LOGIN,
         LOGOUT,
         OK,
-        EDIT
+        EDIT,
+        ADD,
+        DELETE
     }
 
     [Serializable]

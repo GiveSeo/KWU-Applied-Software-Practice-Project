@@ -87,6 +87,12 @@
     <Compile Include="TeamCreateForm.Designer.cs">
       <DependentUpon>TeamCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeamManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamManageForm.Designer.cs">
+      <DependentUpon>TeamManageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlblank.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="TeamCreateForm.resx">
       <DependentUpon>TeamCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamManageForm.resx">
+      <DependentUpon>TeamManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlblank.resx">
       <DependentUpon>UserControlblank.cs</DependentUpon>

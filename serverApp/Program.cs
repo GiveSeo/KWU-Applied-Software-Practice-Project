@@ -61,6 +61,10 @@ namespace Server
             User u3 = new User("전병은", "priesthief", "1111");
             User u4 = new User("이재훈", "ijh1382", "1111");
             Team t = new Team(0, u1, "응소실 9조");
+            t.AddMemid(u2.GetId());
+            t.AddMemid(u3.GetId());
+            t.AddMemid(u4.GetId());
+
             u1.AddTeamId(0);
             u2.AddTeamId(0);
             u3.AddTeamId(0);
@@ -146,6 +150,45 @@ namespace Server
                             }
                             Console.WriteLine("로그인 완료");
                             break;
+                        case PacketType.ADD:
+                            Team new_team = (Team)p;
+                            teams.Add(new_team);
+                            SaveTeam();
+                            ok = new Packet(PacketType.OK);
+                            writebuffer = Packet.Serialize(ok);
+                            stream.Write(writebuffer, 0, writebuffer.Length);
+                            stream.Flush();
+                            Console.WriteLine("팀 추가 완료");
+                            break;
+                        case PacketType.EDIT:
+                            Team team = (Team)p;
+                            for(int i = teams.Count - 1; i >= 0; i--)
+                            {
+                                if(team.GetID() == teams[i].GetID())
+                                    teams.RemoveAt(i);
+                            }
+                            teams.Add(team);
+                            SaveTeam();
+                            ok = new Packet(PacketType.OK);
+                            writebuffer = Packet.Serialize(ok);
+                            stream.Write(writebuffer, 0, writebuffer.Length);
+                            stream.Flush();
+                            Console.WriteLine("팀 수정 완료");
+                            break;
+                        case PacketType.DELETE:
+                            Team del_team = (Team)p;
+                            for (int i = teams.Count - 1; i >= 0; i--)
+                            {
+                                if (del_team.GetID() == teams[i].GetID())
+                                    teams.RemoveAt(i);
+                            }
+                            SaveTeam();
+                            ok = new Packet(PacketType.OK);
+                            writebuffer = Packet.Serialize(ok);
+                            stream.Write(writebuffer, 0, writebuffer.Length);
+                            stream.Flush();
+                            Console.WriteLine("팀 삭제 완료");
+                            break;
                         default:
                             break;
                     }
@@ -183,8 +226,8 @@ namespace Server
         static void Main(string[] args)
         {
             InitList();
-            //LoadTeam();
-            //LoadUser();
+            LoadTeam();
+            LoadUser();
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 13000);
             Console.WriteLine("!서버 실행!");
             listener.Start();
