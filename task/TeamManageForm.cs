@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,8 @@ namespace task
             ListViewItem lsvitem = new ListViewItem(txtGoal.Text);
             lsvitem.SubItems.Add(datePicker.Value.ToString("yyyy-MM-dd"));
             lsvGoal.Items.Add(lsvitem);
+            datePicker.Value = DateTime.Now;
+            txtGoal.Text = string.Empty;
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace task
             }
             foreach (ListViewItem k in lsvGoal.Items)
             {
-                s.AddGoal(k.SubItems[0].Text);
+                s.AddGoal(new Tuple<string, DateTime>(k.SubItems[0].Text, DateTime.ParseExact(k.SubItems[1].Text, "yyyy-MM-dd", CultureInfo.InvariantCulture)));
             }
             DataPassed?.Invoke(s);
             this.Close();

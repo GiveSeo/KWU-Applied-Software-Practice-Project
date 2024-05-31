@@ -70,7 +70,7 @@ namespace Server
             u3.AddTeamId(0);
             u4.AddTeamId(0);
             t.ChangePeople(4);
-            t.AddGoal("팀플 끝내기");
+            t.AddGoal(new Tuple<string,DateTime>("팀플 끝내기",DateTime.Now));
             teams.Add(t);
             users.Add(u1);
             users.Add(u2);

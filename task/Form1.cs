@@ -183,10 +183,10 @@ namespace task
             }
             foreach (Team t in teams)
             {
-                foreach(string s in t.GetGoals())// goallsv add
+                foreach(Tuple<string,DateTime> s in t.GetGoals())// goallsv add
                 {
                     ListViewItem s2 = new ListViewItem(t.GetID().ToString());
-                    s2.SubItems.Add(s);
+                    s2.SubItems.Add(s.Item1);
                     Goallsv.Items.Add(s2);
                 }
             }
@@ -280,16 +280,15 @@ namespace task
             }
             for(int i=del.GetGoals().Count - 1; i >= 0; i--)
             {
-                if (del_goal == del.GetGoals()[i])
+                if (del_goal == del.GetGoals()[i].Item1)
                     del.GetGoals().RemoveAt(i);
             }
             this.m_networkstream = this.client.GetStream();
             del.type = PacketType.EDIT;
             Packet.Serialize(del).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("팀 삭제");
+            MessageBox.Show("목표 삭제");
             this.m_networkstream.Flush();
-            teams.Remove(del);
             list_view_set();
         }
 

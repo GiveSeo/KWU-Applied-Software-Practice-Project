@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\classlibrary1\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|solutionrelative:classlibrary1\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,16 +11,12 @@
       "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|c:\\users\\\uB3C4\uCE58\\source\\repos\\mww\\kwu-applied-software-practice-project\\task\\teamcreateform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|c:\\users\\\uB3C4\uCE58\\source\\repos\\mww\\kwu-applied-software-practice-project\\task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\classlibrary1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|solutionrelative:classlibrary1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teammanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,12 +27,28 @@
       "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9BDCE6E-3DD2-45FD-8B49-BE51E5DEEAC5}|serverApp\\serverApp.csproj|c:\\users\\\uB3C4\uCE58\\source\\repos\\mww\\kwu-applied-software-practice-project\\serverapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BDCE6E-3DD2-45FD-8B49-BE51E5DEEAC5}|serverApp\\serverApp.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\serverapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9BDCE6E-3DD2-45FD-8B49-BE51E5DEEAC5}|serverApp\\serverApp.csproj|solutionrelative:serverapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\classlibrary1\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|solutionrelative:classlibrary1\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\classlibrary1\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|solutionrelative:classlibrary1\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\teamcreateform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|solutionrelative:task\\teamcreateform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\classlibrary1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{289FC858-2C46-433B-A04E-309B30CBBCFB}|ClassLibrary1\\Myclass.csproj|solutionrelative:classlibrary1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AAD5C879-5542-49E4-BF10-171912ABAEA4}|task\\task.csproj|C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,17 +111,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\ClassLibrary1\\Team.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\Team.cs",
               "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\ClassLibrary1\\Team.cs",
               "RelativeToolTip": "ClassLibrary1\\Team.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAkwA8AAAAjAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAowCAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T16:20:00.189Z",
               "IsPinned": true,
@@ -158,42 +158,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TeamCreateForm.resx",
-              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.resx",
-              "RelativeDocumentMoniker": "task\\TeamCreateForm.resx",
-              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.resx",
-              "RelativeToolTip": "task\\TeamCreateForm.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-05-31T14:23:29.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TeamCreateForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs",
-              "RelativeDocumentMoniker": "task\\TeamCreateForm.cs",
-              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T16:32:09.328Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeamManageForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs",
-              "RelativeDocumentMoniker": "task\\TeamManageForm.cs",
-              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "task\\TeamManageForm.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:33:10.377Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Form1.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
               "RelativeDocumentMoniker": "task\\Form1.cs",
@@ -205,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Form2.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form2.cs",
               "RelativeDocumentMoniker": "task\\Form2.cs",
@@ -217,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\ClassLibrary1\\User.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\User.cs",
@@ -225,31 +189,30 @@
               "RelativeToolTip": "ClassLibrary1\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T16:21:24.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T16:21:24.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TeamCreateForm.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs",
               "RelativeDocumentMoniker": "task\\TeamCreateForm.cs",
               "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs",
               "RelativeToolTip": "task\\TeamCreateForm.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAwCEAAAAMAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAUwBkAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T16:32:35.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TeamManageForm.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs",
               "RelativeDocumentMoniker": "task\\TeamManageForm.cs",
               "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs",
               "RelativeToolTip": "task\\TeamManageForm.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAUwCYAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwCMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T08:33:17.227Z",
               "EditorCaption": ""
@@ -269,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "Packet.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\ClassLibrary1\\Packet.cs",
               "RelativeDocumentMoniker": "ClassLibrary1\\Packet.cs",
@@ -277,32 +240,69 @@
               "RelativeToolTip": "ClassLibrary1\\Packet.cs",
               "ViewState": "AQIAABEAAAAAAAAAAADwvxwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T16:19:59.603Z"
+              "WhenOpened": "2024-05-28T16:19:59.603Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
+              "RelativeDocumentMoniker": "task\\Form1.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
+              "RelativeToolTip": "task\\Form1.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAIwMgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T09:56:52.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\serverApp\\Program.cs",
               "RelativeDocumentMoniker": "serverApp\\Program.cs",
               "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\serverApp\\Program.cs",
               "RelativeToolTip": "serverApp\\Program.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAcwCoAAAA3AAAA",
+              "ViewState": "AQIAAMsAAAAAAAAAAAAcwOsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T15:29:13.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
-              "RelativeDocumentMoniker": "task\\Form1.cs",
-              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
-              "RelativeToolTip": "task\\Form1.cs",
-              "ViewState": "AQIAAAYBAAAAAAAAAAAQwCQBAAAcAAAA",
+              "DocumentIndex": 1,
+              "Title": "TeamCreateForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs",
+              "RelativeDocumentMoniker": "task\\TeamCreateForm.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "task\\TeamCreateForm.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T09:56:52.65Z",
+              "WhenOpened": "2024-05-28T16:32:09.328Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeamManageForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs",
+              "RelativeDocumentMoniker": "task\\TeamManageForm.cs",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamManageForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "task\\TeamManageForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T08:33:10.377Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TeamCreateForm.resx",
+              "DocumentMoniker": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.resx",
+              "RelativeDocumentMoniker": "task\\TeamCreateForm.resx",
+              "ToolTip": "C:\\Users\\\uB3C4\uCE58\\source\\repos\\mww\\KWU-Applied-Software-Practice-Project\\task\\TeamCreateForm.resx",
+              "RelativeToolTip": "task\\TeamCreateForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-31T14:23:29.923Z",
               "EditorCaption": ""
             },
             {

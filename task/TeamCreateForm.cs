@@ -32,7 +32,7 @@ namespace task
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ListViewItem s = new ListViewItem(txtMemId.Text);
-            txtMemId.Text = "";
+            txtMemId.Text = string.Empty;
             lsvMemId.Items.Add(s);
         }
 

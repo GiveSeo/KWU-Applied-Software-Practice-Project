@@ -14,7 +14,7 @@ namespace Myclass
         private int people;
         private string project;
         private List<string> memid;
-        private List<string> goals;
+        private List<Tuple<string,DateTime>> goals;
         public Team(int i, User u, string p)
         {
             id = i;
@@ -22,7 +22,7 @@ namespace Myclass
             people = 1;
             project = p;
             memid= new List<string>();
-            goals = new List<string>();
+            goals = new List<Tuple<string, DateTime>>();
         }
 
         public Team(int i,User u,string p,List<string> s)
@@ -32,7 +32,7 @@ namespace Myclass
             people = 1 + s.Count;
             project = p;
             memid = s;
-            goals = new List<string>();
+            goals = new List<Tuple<string, DateTime>>();
         }
 
         public int GetID() { return id; }
@@ -42,9 +42,9 @@ namespace Myclass
 
         public List<string> GetMemid() {  return memid; }
 
-        public List<string> GetGoals() {  return goals; }
-        public void AddGoal(string s) { goals.Add(s); }
-        public void RemoveGoal(string s)
+        public List<Tuple<string, DateTime>> GetGoals() {  return goals; }
+        public void AddGoal(Tuple<string, DateTime> s) { goals.Add(s); }
+        public void RemoveGoal(Tuple<string, DateTime> s)
         {
             if (goals.Count == 0)
                 return;
