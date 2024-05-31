@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\serverApp",
     "\\task"
   ],
-  "SelectedNode": "\\task\\Form1.cs",
+  "SelectedNode": "\\serverApp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

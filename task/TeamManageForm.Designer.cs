@@ -37,6 +37,8 @@
             this.lsvGoal = new System.Windows.Forms.ListView();
             this.txtTeamId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -52,7 +54,7 @@
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(127, 351);
+            this.btnGenerate.Location = new System.Drawing.Point(124, 367);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(108, 26);
@@ -75,7 +77,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(112, 145);
+            this.label3.Location = new System.Drawing.Point(121, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 23;
@@ -87,9 +89,9 @@
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(43, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 22;
-            this.label2.Text = "enter here";
+            this.label2.Text = "Goal Name";
             // 
             // txtGoal
             // 
@@ -102,7 +104,7 @@
             // lsvGoal
             // 
             this.lsvGoal.HideSelection = false;
-            this.lsvGoal.Location = new System.Drawing.Point(46, 173);
+            this.lsvGoal.Location = new System.Drawing.Point(46, 208);
             this.lsvGoal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvGoal.Name = "lsvGoal";
             this.lsvGoal.Size = new System.Drawing.Size(288, 155);
@@ -127,11 +129,30 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Team ID";
             // 
+            // datePicker
+            // 
+            this.datePicker.Location = new System.Drawing.Point(143, 146);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(200, 21);
+            this.datePicker.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(43, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 16);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Dead Line";
+            // 
             // TeamManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 415);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.datePicker);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.label4);
@@ -160,5 +181,7 @@
         private System.Windows.Forms.ListView lsvGoal;
         private System.Windows.Forms.TextBox txtTeamId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.Label label5;
     }
 }

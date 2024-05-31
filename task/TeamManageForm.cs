@@ -20,6 +20,9 @@ namespace task
         {
             teams = t;
             InitializeComponent();
+            lsvGoal.View = View.Details;
+            lsvGoal.Columns.Add("Goal", 100);
+            lsvGoal.Columns.Add("Dead Line", 400);
         }
 
         private void TeamManageFrom_Load(object sender, EventArgs e)
@@ -30,6 +33,7 @@ namespace task
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ListViewItem lsvitem = new ListViewItem(txtGoal.Text);
+            lsvitem.SubItems.Add(datePicker.Value.ToString("yyyy-MM-dd"));
             lsvGoal.Items.Add(lsvitem);
         }
 
