@@ -34,6 +34,23 @@ namespace Client
             teams = tl.ToList<Team>();
         }
 
+        public void UpdateUserTeamId(int i) { cur_user.AddTeamId(i); }
+        public void UpdateList()
+        {
+            team_listbox.Items.Clear();
+            List<int> teamids = cur_user.GetTeamIds();
+            foreach (int i in teamids)
+            {
+                foreach (Team t in teams)
+                {
+                    if (t.GetID() == i)
+                        team_listbox.Items.Add(t);
+                }
+            }
+        }
+        public void UpdateUsers(List<User> users) { this.users = users; }
+        public void UpdateTeams(List<Team> teams) { this.teams = teams; }
+
         private void Temp_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Close();
@@ -41,21 +58,14 @@ namespace Client
 
         private void Temp_Load(object sender, EventArgs e)
         {
-            List<int> teamids = cur_user.GetTeamIds();
-            foreach (int i in teamids)
-            {
-                foreach (Team t in teams)
-                {
-                    if(t.GetID() == i)
-                        team_listbox.Items.Add(i);
-                }
-            }
+            UpdateList();
             name_label.Text += cur_user.GetName();
         }
 
         private void teamadd_btn_Click(object sender, EventArgs e)
         {
-
+            TeamAddForm taf = new TeamAddForm(this, client, stream, cur_user, users, teams);
+            taf.ShowDialog();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

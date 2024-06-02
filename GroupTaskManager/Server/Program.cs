@@ -146,6 +146,11 @@ namespace Server
                             }
                             Console.WriteLine("로그인 완료");
                             break;
+                        case PacketType.ADDTEAM:
+                            Team t = (Team)Packet.Deserialize(readbuffer);
+                            teams.Add(t);
+                            SaveTeam();
+                            break;
                         default:
                             break;
                     }

@@ -15,7 +15,7 @@ namespace Myclass
         LOGIN,
         LOGOUT,
         OK,
-        EDIT
+        ADDTEAM
     }
 
     [Serializable]

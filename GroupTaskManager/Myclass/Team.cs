@@ -22,7 +22,7 @@ namespace Myclass
             project = p;
             goals = new List<string>();
         }
-
+        public override string ToString() { return project; }
         public int GetID() { return id; }
         public User GetAdmin() { return admin; }
         public int GetPeople() { return people;}

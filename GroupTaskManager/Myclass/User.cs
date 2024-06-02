@@ -29,6 +29,7 @@ namespace Myclass
             this.password = password;
             cur_teamids = null;
         }
+        override public string ToString() { return name; }
         public string GetId() {  return id; }
         public string GetPassword() { return password; }
         public string GetName() { return name; }
