@@ -4,12 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using ClassLibrary1;
 using Microsoft.Bot.Connector.DirectLine;
 using Myclass;
 
@@ -39,8 +43,51 @@ namespace task
             this.users = users;
             this.teams = teams;
             list_view_set();
-        }
+            Thread readThread = new Thread(new ThreadStart(ReadData));
+            readThread.IsBackground = true;
+            readThread.Start();
 
+        }
+        private void ReadData()
+        {
+            int bytesRead;
+
+            while (true)
+            {
+                try
+                {
+                    // 네트워크 스트림에서 데이터 읽기
+                    bytesRead = m_networkstream.Read(readBuffer, 0, readBuffer.Length);
+                    if (bytesRead > 0)
+                    {
+                        Packet p = (Packet)Packet.Deserialize(readBuffer);
+                        if(p.type ==PacketType.CHAT_EVERY||p.type == PacketType.CHAT_WISPHER)
+                        {
+                            Chat c = (Chat)p;
+                            string message = c.GetUser().GetName() + " : " + c.GetMessage();
+                            AppendText(message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // 예외 처리 (연결이 끊어지거나 오류 발생 시)
+                    AppendText("Error: " + ex.Message);
+                    break;
+                }
+            }
+        }
+        private void AppendText(string text)
+        {
+            if (textBoxLog.InvokeRequired)
+            {
+                textBoxLog.Invoke(new Action<string>(AppendText), text);
+            }
+            else
+            {
+                textBoxLog.AppendText(text + Environment.NewLine);
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             displayDays();
@@ -290,6 +337,14 @@ namespace task
             MessageBox.Show("목표 삭제");
             this.m_networkstream.Flush();
             list_view_set();
+        }
+
+        private void SendToEvery_Click(object sender, EventArgs e)
+        {
+            Chat c = new Chat(cur_user, 1, txbmsg.Text);
+            c.type= PacketType.CHAT_EVERY;
+            Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
+            this.Send();
         }
 
         private void metroButton6_Click(object sender, EventArgs e)

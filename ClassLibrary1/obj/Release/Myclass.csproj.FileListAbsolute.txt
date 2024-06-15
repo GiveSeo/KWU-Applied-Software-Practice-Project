@@ -4,3 +4,9 @@ C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\ClassLibr
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\Myclass.csproj.CoreCompileInputs.cache
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\ClassLibrary1.dll
 C:\Users\도치\source\repos\mww\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\ClassLibrary1.pdb
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\Myclass.csproj.AssemblyReference.cache
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\Myclass.csproj.CoreCompileInputs.cache
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\ClassLibrary1\obj\Release\ClassLibrary1.pdb

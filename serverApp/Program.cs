@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using Myclass;
 using System.Runtime.CompilerServices;
+using ClassLibrary1;
 
 namespace Server
 {
@@ -17,6 +18,7 @@ namespace Server
     {
         static List<User> users = new List<User>();
         static List<Team> teams = new List<Team>();
+        static List<(User, TcpClient)> chatClient = new List<(User, TcpClient)>();
         static byte[] readbuffer = new byte[Packet.length];
         static byte[] writebuffer = new byte[Packet.length];
 
@@ -89,6 +91,8 @@ namespace Server
         {
             TcpClient client = (TcpClient)o;
             NetworkStream stream = client.GetStream();
+            StreamReader reader = new StreamReader(stream);
+            StreamWriter writer = new StreamWriter(stream);
             while (true)
             {
                 if (!client.Connected)
@@ -140,6 +144,7 @@ namespace Server
                                     stream.Write(writebuffer, 0, writebuffer.Length);
                                     stream.Flush();
                                 }
+                                chatClient.Add((check_user, client));
                             }
                             else
                             {
@@ -189,6 +194,16 @@ namespace Server
                             stream.Flush();
                             Console.WriteLine("팀 삭제 완료");
                             break;
+                        case PacketType.CHAT_EVERY:
+                            Chat mes = (Chat)p;
+                            writebuffer = Packet.Serialize(mes);
+                            foreach (var (User, Tcpclient) in chatClient)
+                            {
+                                NetworkStream s = Tcpclient.GetStream();
+                                s.Write(writebuffer,0, writebuffer.Length);
+                            }
+                            Console.WriteLine("전체 메세지 전송 완료");
+                                break;
                         default:
                             break;
                     }

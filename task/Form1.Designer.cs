@@ -60,11 +60,9 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.SendToEvery = new MetroFramework.Controls.MetroButton();
+            this.textBoxLog = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -79,6 +77,7 @@
             this.btn_Delete = new MetroFramework.Controls.MetroTile();
             this.btn_Manage = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
+            this.txbmsg = new System.Windows.Forms.TextBox();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -128,7 +127,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(424, 141);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(1267, 799);
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
@@ -482,12 +481,11 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.txbmsg);
             this.metroTabPage3.Controls.Add(this.listBox1);
-            this.metroTabPage3.Controls.Add(this.metroButton5);
-            this.metroTabPage3.Controls.Add(this.metroButton4);
             this.metroTabPage3.Controls.Add(this.metroButton3);
-            this.metroTabPage3.Controls.Add(this.metroButton2);
-            this.metroTabPage3.Controls.Add(this.metroTextBox3);
+            this.metroTabPage3.Controls.Add(this.SendToEvery);
+            this.metroTabPage3.Controls.Add(this.textBoxLog);
             this.metroTabPage3.Controls.Add(this.metroLabel8);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
@@ -510,24 +508,6 @@
             this.listBox1.Size = new System.Drawing.Size(120, 172);
             this.listBox1.TabIndex = 14;
             // 
-            // metroButton5
-            // 
-            this.metroButton5.Location = new System.Drawing.Point(425, 124);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(75, 23);
-            this.metroButton5.TabIndex = 13;
-            this.metroButton5.Text = "metroButton5";
-            this.metroButton5.UseSelectable = true;
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(425, 77);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(75, 23);
-            this.metroButton4.TabIndex = 12;
-            this.metroButton4.Text = "metroButton4";
-            this.metroButton4.UseSelectable = true;
-            // 
             // metroButton3
             // 
             this.metroButton3.Location = new System.Drawing.Point(425, 427);
@@ -537,45 +517,46 @@
             this.metroButton3.Text = "metroButton3";
             this.metroButton3.UseSelectable = true;
             // 
-            // metroButton2
+            // SendToEvery
             // 
-            this.metroButton2.Location = new System.Drawing.Point(425, 385);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 9;
-            this.metroButton2.Text = "metroButton2";
-            this.metroButton2.UseSelectable = true;
+            this.SendToEvery.Location = new System.Drawing.Point(425, 385);
+            this.SendToEvery.Name = "SendToEvery";
+            this.SendToEvery.Size = new System.Drawing.Size(75, 23);
+            this.SendToEvery.TabIndex = 9;
+            this.SendToEvery.Text = "SendToEvery";
+            this.SendToEvery.UseSelectable = true;
+            this.SendToEvery.Click += new System.EventHandler(this.SendToEvery_Click);
             // 
-            // metroTextBox3
+            // textBoxLog
             // 
             // 
             // 
             // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(6, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(279, 279);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(48, 77);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Multiline = true;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(286, 281);
-            this.metroTextBox3.TabIndex = 8;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxLog.CustomButton.Image = null;
+            this.textBoxLog.CustomButton.Location = new System.Drawing.Point(6, 1);
+            this.textBoxLog.CustomButton.Name = "";
+            this.textBoxLog.CustomButton.Size = new System.Drawing.Size(279, 279);
+            this.textBoxLog.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textBoxLog.CustomButton.TabIndex = 1;
+            this.textBoxLog.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBoxLog.CustomButton.UseSelectable = true;
+            this.textBoxLog.CustomButton.Visible = false;
+            this.textBoxLog.Lines = new string[0];
+            this.textBoxLog.Location = new System.Drawing.Point(48, 77);
+            this.textBoxLog.MaxLength = 32767;
+            this.textBoxLog.Multiline = true;
+            this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.PasswordChar = '\0';
+            this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxLog.SelectedText = "";
+            this.textBoxLog.SelectionLength = 0;
+            this.textBoxLog.SelectionStart = 0;
+            this.textBoxLog.ShortcutsEnabled = true;
+            this.textBoxLog.Size = new System.Drawing.Size(286, 281);
+            this.textBoxLog.TabIndex = 8;
+            this.textBoxLog.UseSelectable = true;
+            this.textBoxLog.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBoxLog.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel8
             // 
@@ -710,6 +691,13 @@
             this.btn_Create.UseSelectable = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
+            // txbmsg
+            // 
+            this.txbmsg.Location = new System.Drawing.Point(48, 387);
+            this.txbmsg.Name = "txbmsg";
+            this.txbmsg.Size = new System.Drawing.Size(286, 21);
+            this.txbmsg.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -767,11 +755,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.ListBox listBox1;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroButton SendToEvery;
+        private MetroFramework.Controls.MetroTextBox textBoxLog;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label7;
@@ -785,6 +771,7 @@
         private MetroFramework.Controls.MetroButton metroButton6;
         private System.Windows.Forms.Label label8;
         private MetroFramework.Controls.MetroTile btnDeleteGoal;
+        private System.Windows.Forms.TextBox txbmsg;
     }
 }
 
