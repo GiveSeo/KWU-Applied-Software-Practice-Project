@@ -80,10 +80,10 @@ namespace Server
             users.Add(u4);
             FileStream stream = File.OpenWrite("Team.txt");
             BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(stream, teams);
+            //bf.Serialize(stream, teams);
             stream.Close();
             stream = File.OpenWrite("User.txt");
-            bf.Serialize(stream, users);
+           //bf.Serialize(stream, users);
             stream.Close();
         }
 
@@ -109,6 +109,7 @@ namespace Server
                             stream.Write(writebuffer, 0, writebuffer.Length);
                             stream.Flush();
                             stream.Close();
+                            chatClient.RemoveAll(item => item.Item2 == client);
                             client.Close();
                             Console.WriteLine("연결 종료");
                             return;
@@ -204,6 +205,20 @@ namespace Server
                             }
                             Console.WriteLine("전체 메세지 전송 완료");
                                 break;
+                        case PacketType.CHAT_WISPHER:
+                            Chat mes_whs = (Chat)p;
+                            writebuffer = Packet.Serialize(mes_whs);
+                            foreach (var (U, Tcpclient) in chatClient)
+                            {
+                                if (U.GetId() == mes_whs.GetWhispher_id())
+                                {
+                                    NetworkStream s = Tcpclient.GetStream();
+                                    s.Write(writebuffer, 0, writebuffer.Length);
+                                    break;
+                                }
+                            }
+                            Console.WriteLine("개인 메세지 전송 완료");
+                            break;
                         default:
                             break;
                     }

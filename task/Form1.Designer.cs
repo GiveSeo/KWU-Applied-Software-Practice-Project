@@ -59,8 +59,11 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txb_whis = new System.Windows.Forms.TextBox();
+            this.txbmsg = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.Whispher = new MetroFramework.Controls.MetroButton();
             this.SendToEvery = new MetroFramework.Controls.MetroButton();
             this.textBoxLog = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -77,7 +80,6 @@
             this.btn_Delete = new MetroFramework.Controls.MetroTile();
             this.btn_Manage = new MetroFramework.Controls.MetroTile();
             this.btn_Create = new MetroFramework.Controls.MetroTile();
-            this.txbmsg = new System.Windows.Forms.TextBox();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -481,9 +483,11 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.label9);
+            this.metroTabPage3.Controls.Add(this.txb_whis);
             this.metroTabPage3.Controls.Add(this.txbmsg);
             this.metroTabPage3.Controls.Add(this.listBox1);
-            this.metroTabPage3.Controls.Add(this.metroButton3);
+            this.metroTabPage3.Controls.Add(this.Whispher);
             this.metroTabPage3.Controls.Add(this.SendToEvery);
             this.metroTabPage3.Controls.Add(this.textBoxLog);
             this.metroTabPage3.Controls.Add(this.metroLabel8);
@@ -499,31 +503,55 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(348, 340);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 12);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "귓속말 상대 id";
+            // 
+            // txb_whis
+            // 
+            this.txb_whis.Location = new System.Drawing.Point(437, 337);
+            this.txb_whis.Name = "txb_whis";
+            this.txb_whis.Size = new System.Drawing.Size(120, 21);
+            this.txb_whis.TabIndex = 16;
+            // 
+            // txbmsg
+            // 
+            this.txbmsg.Location = new System.Drawing.Point(48, 387);
+            this.txbmsg.Name = "txbmsg";
+            this.txbmsg.Size = new System.Drawing.Size(286, 21);
+            this.txbmsg.TabIndex = 15;
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(425, 185);
+            this.listBox1.Location = new System.Drawing.Point(437, 159);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 172);
             this.listBox1.TabIndex = 14;
             // 
-            // metroButton3
+            // Whispher
             // 
-            this.metroButton3.Location = new System.Drawing.Point(425, 427);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(75, 23);
-            this.metroButton3.TabIndex = 10;
-            this.metroButton3.Text = "metroButton3";
-            this.metroButton3.UseSelectable = true;
+            this.Whispher.Location = new System.Drawing.Point(437, 429);
+            this.Whispher.Name = "Whispher";
+            this.Whispher.Size = new System.Drawing.Size(75, 23);
+            this.Whispher.TabIndex = 10;
+            this.Whispher.Text = "귓속말";
+            this.Whispher.UseSelectable = true;
+            this.Whispher.Click += new System.EventHandler(this.Whispher_Click);
             // 
             // SendToEvery
             // 
-            this.SendToEvery.Location = new System.Drawing.Point(425, 385);
+            this.SendToEvery.Location = new System.Drawing.Point(437, 384);
             this.SendToEvery.Name = "SendToEvery";
             this.SendToEvery.Size = new System.Drawing.Size(75, 23);
             this.SendToEvery.TabIndex = 9;
-            this.SendToEvery.Text = "SendToEvery";
+            this.SendToEvery.Text = "전체 전송";
             this.SendToEvery.UseSelectable = true;
             this.SendToEvery.Click += new System.EventHandler(this.SendToEvery_Click);
             // 
@@ -691,13 +719,6 @@
             this.btn_Create.UseSelectable = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // txbmsg
-            // 
-            this.txbmsg.Location = new System.Drawing.Point(48, 387);
-            this.txbmsg.Name = "txbmsg";
-            this.txbmsg.Size = new System.Drawing.Size(286, 21);
-            this.txbmsg.TabIndex = 15;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -707,6 +728,7 @@
             this.HelpButton = true;
             this.Name = "Form1";
             this.Text = "Team TaskManger";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
@@ -755,7 +777,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.ListBox listBox1;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton Whispher;
         private MetroFramework.Controls.MetroButton SendToEvery;
         private MetroFramework.Controls.MetroTextBox textBoxLog;
         private MetroFramework.Controls.MetroLabel metroLabel8;
@@ -772,6 +794,8 @@
         private System.Windows.Forms.Label label8;
         private MetroFramework.Controls.MetroTile btnDeleteGoal;
         private System.Windows.Forms.TextBox txbmsg;
+        private System.Windows.Forms.TextBox txb_whis;
+        private System.Windows.Forms.Label label9;
     }
 }
 

@@ -341,8 +341,25 @@ namespace task
 
         private void SendToEvery_Click(object sender, EventArgs e)
         {
-            Chat c = new Chat(cur_user, 1, txbmsg.Text);
+            Chat c = new Chat(cur_user, "", txbmsg.Text);
             c.type= PacketType.CHAT_EVERY;
+            Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
+            this.Send();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.m_networkstream = this.client.GetStream();
+            Packet s = new Packet();
+            s.type = PacketType.LOGOUT;
+            Packet.Serialize(s).CopyTo(this.sendBuffer, 0);
+            this.Send();
+        }
+
+        private void Whispher_Click(object sender, EventArgs e)
+        {
+            Chat c = new Chat(cur_user, txb_whis.Text, txbmsg.Text);
+            c.type = PacketType.CHAT_WISPHER;
             Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
             this.Send();
         }
