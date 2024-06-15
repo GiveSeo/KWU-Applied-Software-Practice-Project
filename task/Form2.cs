@@ -34,6 +34,7 @@ namespace task
             Form1 form = new Form1();
             form.Owner = this;
             form.Show();
+            this.Hide();
         }
     }
 }
