@@ -153,16 +153,22 @@ namespace task
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
-            for(int i = 1; i<dayoftheweek; i++)
+            for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlblank ucblank = new UserControlblank();
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for(int i = 1;i<days;i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
+
+                if (i == specificDay && month == selectmonth && year == selectyear)
+                {
+                    ucday.SetColor(Color.Red);
+                }
+
                 flowLayoutPanel1.Controls.Add(ucday);
             }
         }
@@ -173,6 +179,13 @@ namespace task
             flowLayoutPanel1.Controls.Clear();
 
             month++;
+
+            if (month > 12)
+            {
+                month = 1;
+                year++;
+            }
+
 
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             label8.Text = monthname + " " + year;
@@ -188,10 +201,16 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for (int i = 1; i < days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
+
+                if (i == specificDay && month == selectmonth && year == selectyear)
+                {
+                    ucday.SetColor(Color.Red);
+                }
+
                 flowLayoutPanel1.Controls.Add(ucday);
             }
         }
@@ -496,11 +515,24 @@ namespace task
             list_view_set();
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now;
+
+            label.Text = string.Format("{0:F}", today);
+        }
+
         private void metroButton6_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
 
             month--;
+
+            if (month < 1)
+            {
+                month = 12;
+                year--;
+            }
 
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             label8.Text = monthname + " " + year;
@@ -516,10 +548,16 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for (int i = 1; i < days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
+
+                if (i == specificDay && month == selectmonth && year == selectyear)
+                {
+                    ucday.SetColor(Color.Red);
+                }
+
                 flowLayoutPanel1.Controls.Add(ucday);
             }
         }

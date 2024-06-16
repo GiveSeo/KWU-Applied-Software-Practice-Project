@@ -26,5 +26,9 @@ namespace task
         {
             label1.Text = numday + "";
         }
+        public void SetColor(Color color)
+        {
+            label1.ForeColor = color;
+        }
     }
 }

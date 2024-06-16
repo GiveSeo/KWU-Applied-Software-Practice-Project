@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDeleteGoal = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
@@ -61,6 +62,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.txb_whis = new System.Windows.Forms.TextBox();
             this.txbmsg = new System.Windows.Forms.TextBox();
@@ -74,6 +76,7 @@
             this.Goallsv = new MetroFramework.Controls.MetroListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Teamlsv = new MetroFramework.Controls.MetroListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,9 +87,7 @@
             this.btn_Create = new MetroFramework.Controls.MetroTile();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -120,6 +121,17 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(534, 48);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(118, 45);
+            this.metroTile1.TabIndex = 0;
+            this.metroTile1.Text = "달성 여부 변경";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // label9
             // 
@@ -522,6 +534,16 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(437, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.LoadLogButton_Click);
+            // 
             // lbl
             // 
             this.lbl.AutoSize = true;
@@ -666,6 +688,11 @@
             this.columnHeader5.Text = "목표";
             this.columnHeader5.Width = 140;
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "달성";
+            this.columnHeader8.Width = 45;
+            // 
             // Teamlsv
             // 
             this.Teamlsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -751,31 +778,10 @@
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
-            // button1
+            // timer2
             // 
-            this.button1.Location = new System.Drawing.Point(437, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.LoadLogButton_Click);
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "달성";
-            this.columnHeader8.Width = 45;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(534, 48);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(118, 45);
-            this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "달성 여부 변경";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -861,6 +867,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private MetroFramework.Controls.MetroTile metroTile1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
