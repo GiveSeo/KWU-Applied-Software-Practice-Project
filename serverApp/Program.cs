@@ -80,10 +80,10 @@ namespace Server
             users.Add(u4);
             FileStream stream = File.OpenWrite("Team.txt");
             BinaryFormatter bf = new BinaryFormatter();
-            //bf.Serialize(stream, teams);
+            bf.Serialize(stream, teams);
             stream.Close();
             stream = File.OpenWrite("User.txt");
-           //bf.Serialize(stream, users);
+            bf.Serialize(stream, users);
             stream.Close();
         }
 

@@ -165,7 +165,6 @@
             this.Controls.Add(this.txtTeamId);
             this.Controls.Add(this.label1);
             this.Name = "TeamCreateForm";
-            this.Text = "팀 생성";
             this.Load += new System.EventHandler(this.TeamCreateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

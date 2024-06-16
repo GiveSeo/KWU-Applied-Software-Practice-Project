@@ -17,9 +17,11 @@ namespace task
         public delegate void DataPassedHandler(Team t);
         public event DataPassedHandler DataPassed;
         List<string> teamMemId = new List<string>();
-        public TeamCreateForm(User u)
+        List<Team> teams = new List<Team>();
+        public TeamCreateForm(List<Team> t, User u)
         {
             admin = u;
+            teams = t;
             InitializeComponent();
         }
 
@@ -38,6 +40,17 @@ namespace task
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            Team is_already_exist = null;
+            foreach(Team j in teams)
+            {
+                if (Int32.Parse(txtTeamId.Text) == j.GetID())
+                    is_already_exist = j;
+            }
+            if (is_already_exist != null)
+            {
+                MessageBox.Show("해당 id를 가진 Team이 이미 존재합니다.");
+                return;
+            }
             int teamid = Int32.Parse(txtTeamId.Text);
             foreach (ListViewItem s in lsvMemId.Items)
             {

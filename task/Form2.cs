@@ -35,6 +35,13 @@ namespace task
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            if (id_textbox.Text.Equals(string.Empty)||pw_textbox.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 있습니다.");
+                return;
+            }
+
+            // metroButton2_Click
             client = new TcpClient("127.0.0.1", 13000);
             stream = client.GetStream();
             User u = new User(id_textbox.Text, pw_textbox.Text);
@@ -70,10 +77,15 @@ namespace task
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            if(client == null)
+            if (id_signup.Text.Equals(string.Empty) || name_signup.Text.Equals(string.Empty) || password_signup.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 있습니다.");
+                return;
+            }
+            if (client == null)
                 client = new TcpClient("127.0.0.1", 13000);
             stream = client.GetStream();
-            User u = new User(string.Empty, id_textbox.Text, pw_textbox.Text);//User u = new User(name_textbox.Text, id_textbox.Text, pw_textbox.Text);
+            User u = new User(name_signup.Text, id_signup.Text, password_signup.Text);//User u = new User(name_textbox.Text, id_textbox.Text, pw_textbox.Text);
             u.type = PacketType.SIGNUP;
             byte[] writebuffer = Packet.Serialize(u);
             stream.Write(writebuffer, 0, writebuffer.Length);
@@ -84,6 +96,9 @@ namespace task
             if (p.type != PacketType.OK)
                 MessageBox.Show("회원가입 실패");
             else
+            {
+                MessageBox.Show("회원가입 성공");id_signup.Text= string.Empty;name_signup.Text = string.Empty;password_signup.Text = string.Empty;
+            }
                 MessageBox.Show("회원가입 성공");
         }
     }

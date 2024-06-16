@@ -33,6 +33,8 @@ namespace task
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtGoal.Equals(string.Empty) || txtTeamId.Equals(string.Empty))
+                return;
             ListViewItem lsvitem = new ListViewItem(txtGoal.Text);
             lsvitem.SubItems.Add(datePicker.Value.ToString("yyyy-MM-dd"));
             lsvGoal.Items.Add(lsvitem);
@@ -42,6 +44,8 @@ namespace task
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            if(lsvGoal.Items==null) 
+                return;
             Team s = null;
             foreach(Team team in teams)
             {
@@ -51,11 +55,12 @@ namespace task
             if (s == null)
             {
                 MessageBox.Show("해당 id를 가진 Team이 존재하지 않습니다.");
-                this.Close();
+                return;
             }
             foreach (ListViewItem k in lsvGoal.Items)
             {
                 s.AddGoal(new Tuple<string, DateTime>(k.SubItems[0].Text, DateTime.ParseExact(k.SubItems[1].Text, "yyyy-MM-dd", CultureInfo.InvariantCulture)));
+                s.AddGoal_Achieve(new Tuple<string, bool>(k.SubItems[0].Text, false));
             }
             DataPassed?.Invoke(s);
             this.Close();
