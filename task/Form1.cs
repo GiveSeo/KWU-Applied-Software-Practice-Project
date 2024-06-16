@@ -91,6 +91,8 @@ namespace task
 
         }
 
+        //달력 변경 사항 여기부터 긁어서 고치면됨
+
         private void displayDays()
         {
             DateTime now = DateTime.Now;
@@ -110,7 +112,7 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for(int i = 1;i<days;i++)
+            for(int i = 1;i<=days;i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
@@ -130,6 +132,12 @@ namespace task
 
             month--;
 
+            if (month < 1)
+            {
+                month = 12;
+                year--;
+            }
+
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             label8.Text = monthname + " " + year;
 
@@ -144,7 +152,7 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for (int i = 1; i < days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
@@ -165,6 +173,13 @@ namespace task
 
             month++;
 
+            if (month > 12)
+            {
+                month = 1;
+                year++;
+            }
+
+
             string monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             label8.Text = monthname + " " + year;
 
@@ -179,7 +194,7 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucblank);
             }
 
-            for (int i = 1; i < days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlday ucday = new UserControlday();
                 ucday.days(i);
@@ -192,6 +207,7 @@ namespace task
                 flowLayoutPanel1.Controls.Add(ucday);
             }
         }
+        //여기까지 긁어서 복붙
 
         private void metroTextBox1_Click(object sender, EventArgs e)
         {

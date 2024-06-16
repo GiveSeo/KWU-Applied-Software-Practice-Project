@@ -129,7 +129,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(424, 141);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1267, 799);
             this.metroTabControl1.TabIndex = 11;
             this.metroTabControl1.UseSelectable = true;
@@ -338,7 +338,7 @@
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(43, 120);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(788, 498);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(788, 521);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // label7
@@ -567,6 +567,7 @@
             this.metroTextBox3.Multiline = true;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ReadOnly = true;
             this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.metroTextBox3.SelectedText = "";
             this.metroTextBox3.SelectionLength = 0;
