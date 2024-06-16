@@ -34,6 +34,11 @@ namespace Client
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+            if (id_textbox.Text.Equals(string.Empty) || pw_textbox.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 있습니다.");
+                return;
+            }
             client = new TcpClient("127.0.0.1", 13000);
             stream = client.GetStream();
             User u = new User(id_textbox.Text, pw_textbox.Text);

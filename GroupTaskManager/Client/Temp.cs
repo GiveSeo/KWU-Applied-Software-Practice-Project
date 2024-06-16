@@ -53,7 +53,7 @@ namespace Client
 
         private void Temp_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Close();
+            Application.Exit();
         }
 
         private void Temp_Load(object sender, EventArgs e)

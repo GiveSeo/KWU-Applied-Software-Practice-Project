@@ -17,6 +17,7 @@ namespace Server
     {
         static List<User> users = new List<User>();
         static List<Team> teams = new List<Team>();
+        static List<User> cur_users = new List<User>();
         static byte[] readbuffer = new byte[Packet.length];
         static byte[] writebuffer = new byte[Packet.length];
 
@@ -106,6 +107,20 @@ namespace Server
                             return;
                         case PacketType.SIGNUP:
                             User signup_user = (User)p;
+                            foreach (User user in users)
+                            {
+                                if (signup_user.GetName() == user.GetName() || signup_user.GetId() == user.GetId())
+                                {
+                                    Packet fail = new Packet(PacketType.NOTHING);
+                                    writebuffer = Packet.Serialize(fail);
+                                    stream.Write(writebuffer, 0, writebuffer.Length);
+                                    stream.Flush();
+                                    stream.Close();
+                                    client.Close();
+                                    Console.WriteLine("회원가입 실패");
+                                    return;
+                                }
+                            }
                             users.Add(signup_user);
                             SaveUser();
                             Packet ok = new Packet(PacketType.OK);
@@ -119,6 +134,14 @@ namespace Server
                         case PacketType.LOGIN:
                             User login_user = (User)p;
                             User check_user = users.Find(x => x.GetId() == login_user.GetId() && x.GetPassword() == login_user.GetPassword());
+                            foreach (User cur_user in cur_users)
+                            {
+                                if (check_user.GetId() == login_user.GetId())
+                                {
+                                    check_user = null;
+                                    break;
+                                }
+                            }
                             if (check_user != null)
                             {
                                 check_user.type = PacketType.OK;
@@ -136,16 +159,22 @@ namespace Server
                                     stream.Write(writebuffer, 0, writebuffer.Length);
                                     stream.Flush();
                                 }
+                                cur_users.Add(check_user);
+                                Console.WriteLine("로그인 완료");
+                                break;
                             }
                             else
                             {
-                                Packet fail = new Packet(PacketType.NOTHING);
+                                User fail = new User(null, null);
+                                fail.type = PacketType.NOTHING;
                                 writebuffer = Packet.Serialize(fail);
                                 stream.Write(writebuffer, 0, writebuffer.Length);
                                 stream.Flush();
+                                stream.Close();
+                                client.Close();
+                                Console.WriteLine("로그인 실패");
+                                return;
                             }
-                            Console.WriteLine("로그인 완료");
-                            break;
                         case PacketType.ADDTEAM:
                             Team t = (Team)Packet.Deserialize(readbuffer);
                             teams.Add(t);

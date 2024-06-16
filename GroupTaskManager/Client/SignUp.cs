@@ -24,6 +24,11 @@ namespace Client
 
         private void signup_btn_Click(object sender, EventArgs e)
         {
+            if (name_textbox.Text.Equals(string.Empty) || id_textbox.Text.Equals(string.Empty) || pw_textbox.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 있습니다.");
+                return;
+            }
             TcpClient client = new TcpClient("127.0.0.1", 13000);
             NetworkStream stream = client.GetStream();
             User u = new User(name_textbox.Text, id_textbox.Text, pw_textbox.Text);
