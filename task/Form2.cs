@@ -99,7 +99,6 @@ namespace task
             {
                 MessageBox.Show("회원가입 성공");id_signup.Text= string.Empty;name_signup.Text = string.Empty;password_signup.Text = string.Empty;
             }
-                MessageBox.Show("회원가입 성공");
         }
     }
 }

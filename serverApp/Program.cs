@@ -19,6 +19,7 @@ namespace Server
         static List<User> users = new List<User>();
         static List<Team> teams = new List<Team>();
         static List<(User, TcpClient)> chatClient = new List<(User, TcpClient)>();
+        static List<User> cur_users = new List<User>();
         static byte[] readbuffer = new byte[Packet.length];
         static byte[] writebuffer = new byte[Packet.length];
 
@@ -115,6 +116,20 @@ namespace Server
                             return;
                         case PacketType.SIGNUP:
                             User signup_user = (User)p;
+                            foreach (User user in users)
+                            {
+                                if (signup_user.GetName() == user.GetName() || signup_user.GetId() == user.GetId())
+                                {
+                                    Packet fail = new Packet(PacketType.NOTHING);
+                                    writebuffer = Packet.Serialize(fail);
+                                    stream.Write(writebuffer, 0, writebuffer.Length);
+                                    stream.Flush();
+                                    stream.Close();
+                                    client.Close();
+                                    Console.WriteLine("회원가입 실패");
+                                    return;
+                                }
+                            }
                             users.Add(signup_user);
                             SaveUser();
                             Packet ok = new Packet(PacketType.OK);
@@ -128,6 +143,14 @@ namespace Server
                         case PacketType.LOGIN:
                             User login_user = (User)p;
                             User check_user = users.Find(x => x.GetId() == login_user.GetId() && x.GetPassword() == login_user.GetPassword());
+                            foreach (User cur_user in cur_users)
+                            {
+                                if (check_user.GetId() == login_user.GetId())
+                                {
+                                    check_user = null;
+                                    break;
+                                }
+                            }
                             if (check_user != null)
                             {
                                 check_user.type = PacketType.OK;
@@ -145,17 +168,23 @@ namespace Server
                                     stream.Write(writebuffer, 0, writebuffer.Length);
                                     stream.Flush();
                                 }
+                                cur_users.Add(check_user);
                                 chatClient.Add((check_user, client));
+                                Console.WriteLine("로그인 완료");
+                                break;
                             }
                             else
                             {
-                                Packet fail = new Packet(PacketType.NOTHING);
+                                User fail = new User(null, null);
+                                fail.type = PacketType.NOTHING;
                                 writebuffer = Packet.Serialize(fail);
                                 stream.Write(writebuffer, 0, writebuffer.Length);
                                 stream.Flush();
+                                stream.Close();
+                                client.Close();
+                                Console.WriteLine("로그인 실패");
+                                return;
                             }
-                            Console.WriteLine("로그인 완료");
-                            break;
                         case PacketType.ADD:
                             Team new_team = (Team)p;
                             teams.Add(new_team);
@@ -202,6 +231,7 @@ namespace Server
                             {
                                 NetworkStream s = Tcpclient.GetStream();
                                 s.Write(writebuffer,0, writebuffer.Length);
+                                Console.WriteLine("전체 메세지 전송 완료");
                             }
                             Console.WriteLine("전체 메세지 전송 완료");
                                 break;
@@ -218,6 +248,25 @@ namespace Server
                                 }
                             }
                             Console.WriteLine("개인 메세지 전송 완료");
+                            break;
+                        case PacketType.CHAT_TEAM: // 팀 메시지 전송 패킷
+                            Chat mes_team = (Chat)p;
+                            writebuffer = Packet.Serialize(mes_team);
+                            int team_id = mes_team.GetTeam_id();
+                            foreach (var (U, Tcpclient) in chatClient)
+                            {
+                                List<int> tlist = U.GetTeamIds();
+                                foreach (int tid in tlist)
+                                {
+                                    if (tid == team_id)
+                                    {
+                                        NetworkStream s = Tcpclient.GetStream();
+                                        s.Write(writebuffer, 0, writebuffer.Length);
+                                        break;
+                                    }
+                                }
+                            }
+                            Console.WriteLine("팀 메세지 전송 완료");
                             break;
                         default:
                             break;
