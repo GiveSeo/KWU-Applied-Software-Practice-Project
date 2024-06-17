@@ -172,14 +172,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\crime\\source\\repos\\TeamProject\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
               "RelativeDocumentMoniker": "task\\Form1.cs",
-              "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "task\\Form1.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs [Design]",
+              "RelativeToolTip": "task\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T16:41:32.544Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -260,7 +260,7 @@
               "RelativeDocumentMoniker": "task\\Form1.cs",
               "ToolTip": "C:\\Users\\crime\\source\\repos\\TeamProject\\KWU-Applied-Software-Practice-Project\\task\\Form1.cs",
               "RelativeToolTip": "task\\Form1.cs",
-              "ViewState": "AQIAAAUCAAAAAAAAAAAowK0BAABvAAAA",
+              "ViewState": "AQIAAO8BAAAAAAAAAAAkwK0BAABvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T09:56:52.65Z",
               "EditorCaption": ""
