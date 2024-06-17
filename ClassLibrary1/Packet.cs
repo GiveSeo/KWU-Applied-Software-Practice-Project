@@ -19,7 +19,8 @@ namespace Myclass
         ADD,
         DELETE,
         CHAT_EVERY,
-        CHAT_WISPHER
+        CHAT_WISPHER,
+        CHAT_TEAM
     }
 
     [Serializable]

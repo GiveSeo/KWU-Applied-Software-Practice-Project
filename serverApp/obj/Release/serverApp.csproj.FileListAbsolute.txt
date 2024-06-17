@@ -18,3 +18,13 @@ C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\serverApp\
 C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.CopyComplete
 C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.exe
 C:\Users\jun12\source\repos\mmw\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.pdb
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.exe.config
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.exe
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\serverApp.pdb
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\ClassLibrary1.dll
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\bin\Release\ClassLibrary1.pdb
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.AssemblyReference.cache
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.CoreCompileInputs.cache
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.csproj.Up2Date
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.exe
+C:\Users\crime\source\repos\TeamProject\KWU-Applied-Software-Practice-Project\serverApp\obj\Release\serverApp.pdb

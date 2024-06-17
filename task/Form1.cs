@@ -87,7 +87,7 @@ namespace task
                     if (bytesRead > 0)
                     {
                         Packet p = (Packet)Packet.Deserialize(readBuffer);
-                        if(p.type ==PacketType.CHAT_EVERY||p.type == PacketType.CHAT_WISPHER)
+                        if(p.type ==PacketType.CHAT_EVERY||p.type == PacketType.CHAT_WISPHER||p.type == PacketType.CHAT_TEAM) // 팀 채팅 패킷 추가
                         {
                             Chat c = (Chat)p;
                             string message = c.GetUser().GetName() + " : " + c.GetMessage();
@@ -399,7 +399,7 @@ namespace task
 
         private void SendToEvery_Click(object sender, EventArgs e)
         {
-            Chat c = new Chat(cur_user, "", txbmsg.Text);
+            Chat c = new Chat(cur_user, "", txbmsg.Text, -1);
             c.type= PacketType.CHAT_EVERY;
             Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
             this.Send();
@@ -419,7 +419,7 @@ namespace task
             using (OpenFileDialog openFileDialog = new OpenFileDialog()) // 파일 목록 열기
             {
                 openFileDialog.InitialDirectory = ChatLogFolderPath;
-                openFileDialog.Filter = "Text files (.txt)|.txt|All files (.)|.";
+                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;
 
@@ -433,7 +433,7 @@ namespace task
         }
         private void Whispher_Click(object sender, EventArgs e)
         {
-            Chat c = new Chat(cur_user, txb_whis.Text, txbmsg.Text);
+            Chat c = new Chat(cur_user, txb_whis.Text, txbmsg.Text, -1);
             c.type = PacketType.CHAT_WISPHER;
             Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
             this.Send();
@@ -520,6 +520,19 @@ namespace task
             DateTime today = DateTime.Now;
 
             label.Text = string.Format("{0:F}", today);
+        }
+
+        private void Team_Click(object sender, EventArgs e) // 팀 채팅 버튼 추가
+        {
+            if(!int.TryParse(txb_team.Text, out _))
+            {
+                MessageBox.Show("올바른 팀 아이디(숫자)를 입력해주세요!");
+                return;
+            } 
+            Chat c = new Chat(cur_user, "", txbmsg.Text, Convert.ToInt32(txb_team.Text));
+            c.type = PacketType.CHAT_TEAM;
+            Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
+            this.Send();
         }
 
         private void metroButton6_Click(object sender, EventArgs e)
