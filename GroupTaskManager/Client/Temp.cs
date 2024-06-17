@@ -75,7 +75,7 @@ namespace Client
             stream.Write(writebuffer, 0, writebuffer.Length);
             byte[] readbuffer = new byte[Packet.length];
             stream.Read(readbuffer, 0, readbuffer.Length);
-            p=(Packet)Packet.Deserialize(readbuffer);
+            p = (Packet)Packet.Deserialize(readbuffer);
             if (p.type == PacketType.OK)
             {
                 stream.Close();

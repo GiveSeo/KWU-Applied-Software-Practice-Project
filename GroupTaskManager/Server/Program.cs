@@ -86,6 +86,7 @@ namespace Server
         {
             TcpClient client = (TcpClient)o;
             NetworkStream stream = client.GetStream();
+            User connected_user = null;
             while (true)
             {
                 if (!client.Connected)
@@ -104,6 +105,7 @@ namespace Server
                             stream.Close();
                             client.Close();
                             Console.WriteLine("연결 종료");
+                            cur_users.Remove(connected_user);
                             return;
                         case PacketType.SIGNUP:
                             User signup_user = (User)p;
@@ -136,7 +138,7 @@ namespace Server
                             User check_user = users.Find(x => x.GetId() == login_user.GetId() && x.GetPassword() == login_user.GetPassword());
                             foreach (User cur_user in cur_users)
                             {
-                                if (check_user.GetId() == login_user.GetId())
+                                if (check_user.GetId() == cur_user.GetId())
                                 {
                                     check_user = null;
                                     break;
@@ -159,7 +161,8 @@ namespace Server
                                     stream.Write(writebuffer, 0, writebuffer.Length);
                                     stream.Flush();
                                 }
-                                cur_users.Add(check_user);
+                                connected_user = check_user;
+                                cur_users.Add(connected_user);
                                 Console.WriteLine("로그인 완료");
                                 break;
                             }
@@ -187,6 +190,7 @@ namespace Server
                 catch(IOException e)
                 {
                     Console.WriteLine("연결 끊어짐");
+                    cur_users.Remove(connected_user);
                     stream.Close();
                     client.Close();
                     return;
@@ -194,6 +198,7 @@ namespace Server
                 catch(SocketException e)
                 {
                     Console.WriteLine("연결 끊어짐");
+                    cur_users.Remove(connected_user);
                     stream.Close();
                     client.Close();
                     return;
@@ -201,6 +206,7 @@ namespace Server
                 catch(ObjectDisposedException e)
                 {
                     Console.WriteLine("삭제된 Object에 접근함");
+                    cur_users.Remove(connected_user);
                     stream.Close();
                     client.Close();
                     return;
@@ -208,6 +214,7 @@ namespace Server
                 catch(Exception e)
                 {
                     Console.WriteLine("{0}으로 인해 현재 스레드를 종료합니다...", e.ToString());
+                    cur_users.Remove(connected_user);
                     stream.Close();
                     client.Close();
                     return;
