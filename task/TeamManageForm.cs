@@ -63,7 +63,7 @@ namespace task
             foreach (ListViewItem k in lsvGoal.Items)
             {
                 s.AddGoal(new Tuple<string, DateTime>(k.SubItems[0].Text, DateTime.ParseExact(k.SubItems[1].Text, "yyyy-MM-dd", CultureInfo.InvariantCulture)));
-                s.AddGoal_Achieve(new Tuple<string, bool>(k.SubItems[0].Text, false));
+                s.AddGoal_Achieve(false);
             }
             DataPassed?.Invoke(s);
             this.Close();

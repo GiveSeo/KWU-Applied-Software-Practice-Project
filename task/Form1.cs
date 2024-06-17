@@ -276,21 +276,15 @@ namespace task
             }
             foreach (Team t in teams)
             {
-                foreach(Tuple<string,DateTime> s in t.GetGoals())// goallsv add
+                for(int i = 0; i < t.GetGoals().Count; i++)
                 {
-                    foreach(Tuple<string,bool> l in t.GetGoals_Achieve())
-                    {
-                        if(l.Item1 == s.Item1)
-                        {
-                            ListViewItem s2 = new ListViewItem(t.GetID().ToString());
-                            s2.SubItems.Add(s.Item1);
-                            if (l.Item2)
-                                s2.SubItems.Add("0");
-                            else
-                                s2.SubItems.Add("X");
-                            Goallsv.Items.Add(s2);
-                        }
-                    }
+                    ListViewItem s2 = new ListViewItem(t.GetID().ToString());
+                    s2.SubItems.Add(t.GetGoals()[i].Item1.ToString());
+                    if (t.GetGoals_Achieve()[i])
+                        s2.SubItems.Add("0");
+                    else
+                        s2.SubItems.Add("X");
+                    Goallsv.Items.Add(s2);
                 }
             }
             foreach (Team t in teams)
@@ -389,12 +383,6 @@ namespace task
                 if (del_goal == del.GetGoals()[i].Item1)
                 {
                     del.GetGoals().RemoveAt(i);
-                }
-            }
-            for (int i = del.GetGoals_Achieve().Count - 1; i >= 0; i--)
-            {
-                if (del_goal == del.GetGoals_Achieve()[i].Item1)
-                {
                     del.GetGoals_Achieve().RemoveAt(i);
                 }
             }
@@ -552,9 +540,9 @@ namespace task
             {
                 if (Teamlsv.FocusedItem.SubItems[0].Text == a.GetID().ToString())
                 {
-                    foreach(Tuple<string,bool> s in a.GetGoals_Achieve())
+                    foreach(bool s in a.GetGoals_Achieve())
                     {
-                        if(s.Item2)
+                        if(s)
                             achieve_goals_count++;
                     }
                 }

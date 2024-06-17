@@ -46,6 +46,14 @@ namespace Server
             FileStream stream = File.OpenRead("Team.txt");
             BinaryFormatter bf = new BinaryFormatter();
             teams = (List<Team>)bf.Deserialize(stream);
+            foreach(Team s in teams)
+            {
+                Console.WriteLine(s.GetID().ToString());
+                foreach(bool k in s.GetGoals_Achieve())
+                {
+                    Console.WriteLine(k);
+                }
+            }
             stream.Close();
         }
 
@@ -68,13 +76,11 @@ namespace Server
             t.AddMemid(u2.GetId());
             t.AddMemid(u3.GetId());
             t.AddMemid(u4.GetId());
-
             u1.AddTeamId(0);
             u2.AddTeamId(0);
             u3.AddTeamId(0);
             u4.AddTeamId(0);
             t.ChangePeople(4);
-            t.AddGoal(new Tuple<string,DateTime>("팀플 끝내기",DateTime.Now));
             teams.Add(t);
             users.Add(u1);
             users.Add(u2);
