@@ -35,10 +35,19 @@
             this.btnDeleteGoal = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonSend = new MetroFramework.Controls.MetroButton();
             this.textBoxInput = new MetroFramework.Controls.MetroTextBox();
             this.textBoxOutput = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.Goallsv = new MetroFramework.Controls.MetroListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
@@ -55,6 +64,10 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Memlsv = new MetroFramework.Controls.MetroListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Team = new MetroFramework.Controls.MetroButton();
             this.txb_team = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -78,19 +91,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Memlsv = new MetroFramework.Controls.MetroListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.Goallsv = new MetroFramework.Controls.MetroListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -186,6 +186,34 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(717, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 12);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "임시 메모장";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(40, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 12);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "챗봇";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(719, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(503, 617);
+            this.textBox1.TabIndex = 9;
             // 
             // buttonSend
             // 
@@ -296,6 +324,60 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(902, 585);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel3.TabIndex = 25;
+            this.metroLabel3.Text = "해당 목표 날짜 : ";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.Location = new System.Drawing.Point(888, 89);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel9.TabIndex = 20;
+            this.metroLabel9.Text = "목표 현황";
+            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Goallsv
+            // 
+            this.Goallsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader11});
+            this.Goallsv.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Goallsv.FullRowSelect = true;
+            this.Goallsv.Location = new System.Drawing.Point(888, 120);
+            this.Goallsv.Name = "Goallsv";
+            this.Goallsv.OwnerDraw = true;
+            this.Goallsv.Size = new System.Drawing.Size(258, 450);
+            this.Goallsv.TabIndex = 24;
+            this.Goallsv.UseCompatibleStateImageBehavior = false;
+            this.Goallsv.UseSelectable = true;
+            this.Goallsv.View = System.Windows.Forms.View.Details;
+            this.Goallsv.Click += new System.EventHandler(this.Goallsv_Click);
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Team";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "목표";
+            this.columnHeader7.Width = 140;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "달성";
+            this.columnHeader11.Width = 45;
             // 
             // label8
             // 
@@ -477,6 +559,44 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(691, 41);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 27;
+            this.metroLabel1.Text = "인원 관리";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Memlsv
+            // 
+            this.Memlsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10});
+            this.Memlsv.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Memlsv.FullRowSelect = true;
+            this.Memlsv.Location = new System.Drawing.Point(691, 77);
+            this.Memlsv.Name = "Memlsv";
+            this.Memlsv.OwnerDraw = true;
+            this.Memlsv.Size = new System.Drawing.Size(390, 486);
+            this.Memlsv.TabIndex = 26;
+            this.Memlsv.UseCompatibleStateImageBehavior = false;
+            this.Memlsv.UseSelectable = true;
+            this.Memlsv.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Team";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "ID";
+            this.columnHeader10.Width = 350;
+            // 
             // Team
             // 
             this.Team.Location = new System.Drawing.Point(1006, 621);
@@ -647,9 +767,9 @@
             // 
             this.label.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.label.Location = new System.Drawing.Point(783, 48);
+            this.label.Location = new System.Drawing.Point(658, 29);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(320, 45);
+            this.label.Size = new System.Drawing.Size(763, 45);
             this.label.TabIndex = 6;
             this.label.Text = "시계";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -701,127 +821,6 @@
             // 
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(719, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(503, 617);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(40, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 12);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "챗봇";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(717, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 12);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "임시 메모장";
-            // 
-            // Memlsv
-            // 
-            this.Memlsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader9,
-            this.columnHeader10});
-            this.Memlsv.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Memlsv.FullRowSelect = true;
-            this.Memlsv.Location = new System.Drawing.Point(691, 77);
-            this.Memlsv.Name = "Memlsv";
-            this.Memlsv.OwnerDraw = true;
-            this.Memlsv.Size = new System.Drawing.Size(390, 486);
-            this.Memlsv.TabIndex = 26;
-            this.Memlsv.UseCompatibleStateImageBehavior = false;
-            this.Memlsv.UseSelectable = true;
-            this.Memlsv.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Team";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader9.Width = 100;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.DisplayIndex = 1;
-            this.columnHeader10.Text = "ID";
-            this.columnHeader10.Width = 350;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(691, 41);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
-            this.metroLabel1.TabIndex = 27;
-            this.metroLabel1.Text = "인원 관리";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Goallsv
-            // 
-            this.Goallsv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader11});
-            this.Goallsv.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Goallsv.FullRowSelect = true;
-            this.Goallsv.Location = new System.Drawing.Point(888, 120);
-            this.Goallsv.Name = "Goallsv";
-            this.Goallsv.OwnerDraw = true;
-            this.Goallsv.Size = new System.Drawing.Size(258, 450);
-            this.Goallsv.TabIndex = 24;
-            this.Goallsv.UseCompatibleStateImageBehavior = false;
-            this.Goallsv.UseSelectable = true;
-            this.Goallsv.View = System.Windows.Forms.View.Details;
-            this.Goallsv.Click += new System.EventHandler(this.Goallsv_Click);
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Team";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "목표";
-            this.columnHeader7.Width = 140;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "달성";
-            this.columnHeader11.Width = 45;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(888, 89);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(69, 19);
-            this.metroLabel9.TabIndex = 20;
-            this.metroLabel9.Text = "목표 현황";
-            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(902, 585);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(113, 19);
-            this.metroLabel3.TabIndex = 25;
-            this.metroLabel3.Text = "해당 목표 날짜 : ";
-            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 

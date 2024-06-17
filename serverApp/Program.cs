@@ -246,6 +246,16 @@ namespace Server
                         case PacketType.CHAT_WISPHER:
                             Chat mes_whs = (Chat)p;
                             writebuffer = Packet.Serialize(mes_whs);
+                            foreach (var (U, Tcpclient) in chatClient) // 전송한 유저에게도 메시지 재송신
+                            {
+                                if (U.GetId() == mes_whs.GetUser().GetId())
+                                {
+                                    NetworkStream s = Tcpclient.GetStream();
+                                    s.Write(writebuffer, 0, writebuffer.Length);
+                                    break;
+                                }
+                            }
+
                             foreach (var (U, Tcpclient) in chatClient)
                             {
                                 if (U.GetId() == mes_whs.GetWhispher_id())
@@ -261,6 +271,15 @@ namespace Server
                             Chat mes_team = (Chat)p;
                             writebuffer = Packet.Serialize(mes_team);
                             int team_id = mes_team.GetTeam_id();
+                            foreach (var (U, Tcpclient) in chatClient) // 전송한 유저에게도 메시지 재송신
+                            {
+                                if (U.GetId() == mes_team.GetUser().GetId())
+                                {
+                                    NetworkStream s = Tcpclient.GetStream();
+                                    s.Write(writebuffer, 0, writebuffer.Length);
+                                    break;
+                                }
+                            }
                             foreach (var (U, Tcpclient) in chatClient)
                             {
                                 List<int> tlist = U.GetTeamIds();
@@ -312,7 +331,7 @@ namespace Server
         }
         static void Main(string[] args)
         {
-            InitList();
+            //InitList();
             LoadTeam();
             LoadUser();
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 13000);
