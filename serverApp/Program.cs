@@ -11,6 +11,7 @@ using System.Threading;
 using Myclass;
 using System.Runtime.CompilerServices;
 using ClassLibrary1;
+using System.CodeDom;
 
 namespace Server
 {
@@ -105,12 +106,19 @@ namespace Server
                     switch (p.type)
                     {
                         case PacketType.LOGOUT:
+                            User logout_user = (User)p;
                             Packet logout = new Packet(PacketType.OK);
                             writebuffer = Packet.Serialize(logout);
                             stream.Write(writebuffer, 0, writebuffer.Length);
                             stream.Flush();
                             stream.Close();
                             chatClient.RemoveAll(item => item.Item2 == client);
+                            for (int i = cur_users.Count - 1; i >= 0; i--)//수정 부분
+                            {
+                                if (cur_users[i].GetId()==logout_user.GetId())
+                                    cur_users.RemoveAt(i);
+                            }
+                            cur_users.Remove(logout_user);//수정 부분
                             client.Close();
                             Console.WriteLine("연결 종료");
                             return;
@@ -145,7 +153,7 @@ namespace Server
                             User check_user = users.Find(x => x.GetId() == login_user.GetId() && x.GetPassword() == login_user.GetPassword());
                             foreach (User cur_user in cur_users)
                             {
-                                if (check_user.GetId() == login_user.GetId())
+                                if (check_user.GetId() == cur_user.GetId())//수정 부분
                                 {
                                     check_user = null;
                                     break;
@@ -169,7 +177,7 @@ namespace Server
                                     stream.Flush();
                                 }
                                 cur_users.Add(check_user);
-                                chatClient.Add((check_user, client));
+                                chatClient.Add((check_user, client));//수정 부분
                                 Console.WriteLine("로그인 완료");
                                 break;
                             }

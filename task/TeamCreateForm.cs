@@ -18,10 +18,12 @@ namespace task
         public event DataPassedHandler DataPassed;
         List<string> teamMemId = new List<string>();
         List<Team> teams = new List<Team>();
-        public TeamCreateForm(List<Team> t, User u)
+        List<User> users = new List<User>();
+        public TeamCreateForm(List<Team> t,List<User> usrs, User u)
         {
             admin = u;
             teams = t;
+            users = usrs;
             InitializeComponent();
         }
 
@@ -33,6 +35,37 @@ namespace task
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtMemId.Text.Equals(string.Empty) || txtPname.Text.Equals(string.Empty)|| txtMemId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 존재합니다.");
+                return;
+            }
+            foreach(ListViewItem k in lsvMemId.Items)
+            {
+                if (k.SubItems[0].Text == txtMemId.Text)
+                {
+                    MessageBox.Show("이미 같은 이름을 가진 조원이 존재합니다.");
+                    return;
+                }
+            }
+            if (admin.GetId() == txtMemId.Text)
+            {
+                MessageBox.Show("본인은 멤버로 포함할 수 없습니다.");
+                return;
+            }
+            bool is_exist_user = false;
+            foreach(User u in users)
+            {
+                if(txtMemId.Text == u.GetId())
+                {
+                    is_exist_user = true;
+                }
+            }
+            if (!is_exist_user)
+            {
+                MessageBox.Show("해당 id를 가진 USER가 존재하지 않습니다.");
+                return;
+            }
             ListViewItem s = new ListViewItem(txtMemId.Text);
             txtMemId.Text = string.Empty;
             lsvMemId.Items.Add(s);
@@ -48,7 +81,7 @@ namespace task
             }
             if (is_already_exist != null)
             {
-                MessageBox.Show("해당 id를 가진 Team이 이미 존재합니다.");
+                MessageBox.Show("해당 id를 가진 Team이 이미 존재합니다. 다른 아이디를 시도해 주세요");
                 return;
             }
             int teamid = Int32.Parse(txtTeamId.Text);

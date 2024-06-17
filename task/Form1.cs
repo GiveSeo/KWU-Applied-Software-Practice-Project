@@ -17,6 +17,7 @@ using ClassLibrary1;
 using MetroFramework.Controls;
 using Microsoft.Bot.Connector.DirectLine;
 using Myclass;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 
 namespace task
@@ -294,7 +295,10 @@ namespace task
             }
             foreach (Team t in teams)
             {
-               foreach (string id in t.GetMemid())// goallsv add
+                ListViewItem ad  = new ListViewItem(t.GetID().ToString());
+                ad.SubItems.Add(t.GetAdmin().GetId());
+                Memlsv.Items.Add(ad);
+                foreach (string id in t.GetMemid())// goallsv add
                {
                     ListViewItem s = new ListViewItem(t.GetID().ToString());
                     s.SubItems.Add(id.ToString());
@@ -324,7 +328,7 @@ namespace task
             del.type = PacketType.DELETE;
             Packet.Serialize(del).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("팀 삭제");
+            MessageBox.Show("팀 삭제 완료");
             this.m_networkstream.Flush();
             teams.Remove(del);
             list_view_set();
@@ -338,7 +342,7 @@ namespace task
             t.type = PacketType.ADD;
             Packet.Serialize(t).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("팀 보내기");
+            MessageBox.Show("팀 생성 완료");
             this.m_networkstream.Flush();
         }
         private void OnManageDataPassed(Team t)
@@ -348,7 +352,7 @@ namespace task
             t.type = PacketType.EDIT;
             Packet.Serialize(t).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("팀 수정 보내기");
+            MessageBox.Show("목표 생성 완료");
             this.m_networkstream.Flush();
         }
         public void Send()
@@ -363,7 +367,7 @@ namespace task
         }
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            TeamCreateForm tcf = new TeamCreateForm(teams,cur_user);
+            TeamCreateForm tcf = new TeamCreateForm(teams,users,cur_user);
             tcf.DataPassed += new TeamCreateForm.DataPassedHandler(OnDataPassed);
             tcf.Show();
         }
@@ -385,6 +389,12 @@ namespace task
                 if (del_goal == del.GetGoals()[i].Item1)
                 {
                     del.GetGoals().RemoveAt(i);
+                }
+            }
+            for (int i = del.GetGoals_Achieve().Count - 1; i >= 0; i--)
+            {
+                if (del_goal == del.GetGoals_Achieve()[i].Item1)
+                {
                     del.GetGoals_Achieve().RemoveAt(i);
                 }
             }
@@ -392,7 +402,7 @@ namespace task
             del.type = PacketType.EDIT;
             Packet.Serialize(del).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("목표 삭제");
+            MessageBox.Show("목표 삭제 완료");
             this.m_networkstream.Flush();
             list_view_set();
         }
@@ -408,7 +418,7 @@ namespace task
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.m_networkstream = this.client.GetStream();
-            Packet s = new Packet();
+            User s = cur_user;//수정 부분, 원래는 packet자체로 보냄
             s.type = PacketType.LOGOUT;
             Packet.Serialize(s).CopyTo(this.sendBuffer, 0);
             this.Send();
@@ -473,12 +483,12 @@ namespace task
                         DateTime currentDate = DateTime.Now;
 
                         // 남은 일수 계산
-                        int daysLeft = (targetDate - currentDate).Days + 1;
+                        int daysLeft = (targetDate - currentDate).Days;
 
                         // 라벨에 남은 일수 표시
                         metroLabel5.Text = $"데드라인까지 {daysLeft}일 남았습니다.";
+                        metroLabel3.Text = $"해당 목표 날짜:{selectyear}년 {selectmonth}월 {specificDay}일";
                     }
-
                 }
             }
         }
@@ -510,7 +520,7 @@ namespace task
             cha.type = PacketType.EDIT;
             Packet.Serialize(cha).CopyTo(this.sendBuffer, 0);
             this.Send();
-            MessageBox.Show("목표 달성 여부 변경");
+            MessageBox.Show("목표 달성 여부 변경 완료");
             this.m_networkstream.Flush();
             list_view_set();
         }
@@ -533,6 +543,24 @@ namespace task
             c.type = PacketType.CHAT_TEAM;
             Packet.Serialize(c).CopyTo(this.sendBuffer, 0);
             this.Send();
+        }
+
+        private void Teamlsv_Click(object sender, EventArgs e)
+        {
+            int achieve_goals_count = 0;
+            foreach (Team a in teams)
+            {
+                if (Teamlsv.FocusedItem.SubItems[0].Text == a.GetID().ToString())
+                {
+                    foreach(Tuple<string,bool> s in a.GetGoals_Achieve())
+                    {
+                        if(s.Item2)
+                            achieve_goals_count++;
+                    }
+                }
+            }
+            metroLabel4.Text = $"현재 팀 총 목표 달성 갯수 : {achieve_goals_count}개";
+
         }
 
         private void metroButton6_Click(object sender, EventArgs e)

@@ -33,8 +33,11 @@ namespace task
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtGoal.Equals(string.Empty) || txtTeamId.Equals(string.Empty))
+            if (txtGoal.Text.Equals(string.Empty) || txtTeamId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("빈 칸이 존재합니다.");
                 return;
+            }
             ListViewItem lsvitem = new ListViewItem(txtGoal.Text);
             lsvitem.SubItems.Add(datePicker.Value.ToString("yyyy-MM-dd"));
             lsvGoal.Items.Add(lsvitem);
