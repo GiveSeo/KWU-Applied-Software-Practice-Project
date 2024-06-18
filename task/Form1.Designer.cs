@@ -91,6 +91,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.label13);
             this.metroPanel1.Controls.Add(this.metroTile1);
             this.metroPanel1.Controls.Add(this.label9);
             this.metroPanel1.Controls.Add(this.btnDeleteGoal);
@@ -822,6 +824,15 @@
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(77, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "인적사항";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -911,6 +922,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.Label label13;
     }
 }
 

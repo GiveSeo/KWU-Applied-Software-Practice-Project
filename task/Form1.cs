@@ -117,10 +117,11 @@ namespace task
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            displayDays();
 
             DateTime today = DateTime.Now;
             label.Text = string.Format("{0:F}", today);
+            label13.Text = $"{cur_user.GetName()}님(ID : {cur_user.GetId()}) 반갑습니다!";
+            displayDays();
         }
 
         private void InitializeBotConnection()
@@ -462,7 +463,7 @@ namespace task
 
                         if (selectmonth == today.Month && selectyear == today.Year && specificDay == today.Day)
                         {
-                            MessageBox.Show("오늘은 프로젝트 데드라인입니다!!");
+                            MessageBox.Show("오늘은 프로젝트 D - day입니다!!");
                         }
 
                         DateTime targetDate = new DateTime(selectyear, selectmonth, specificDay);
@@ -470,12 +471,24 @@ namespace task
                         // 현재 날짜 가져오기
                         DateTime currentDate = DateTime.Now;
 
+                        int daysLeft = 0;
                         // 남은 일수 계산
-                        int daysLeft = (targetDate - currentDate).Days;
+                        if (targetDate.Year == currentDate.Year&&targetDate.Month==currentDate.Month&&targetDate.Day==currentDate.Day)
+                        {
+                            daysLeft = 0;
+                            metroLabel5.Text = $"오늘은 프로젝트 D - day 입니다.";
+                        }
+                        else
+                        {
+                            daysLeft = (targetDate - currentDate).Days+1;
+                            metroLabel5.Text = $"데드라인까지 {daysLeft}일 남았습니다.";
+                        }
+
 
                         // 라벨에 남은 일수 표시
-                        metroLabel5.Text = $"데드라인까지 {daysLeft}일 남았습니다.";
                         metroLabel3.Text = $"해당 목표 날짜:{selectyear}년 {selectmonth}월 {specificDay}일";
+                        flowLayoutPanel1.Controls.Clear();
+                        displayDays();
                     }
                 }
             }

@@ -12,6 +12,7 @@ using Myclass;
 using System.Runtime.CompilerServices;
 using ClassLibrary1;
 using System.CodeDom;
+using System.CodeDom.Compiler;
 
 namespace Server
 {
@@ -46,14 +47,6 @@ namespace Server
             FileStream stream = File.OpenRead("Team.txt");
             BinaryFormatter bf = new BinaryFormatter();
             teams = (List<Team>)bf.Deserialize(stream);
-            foreach(Team s in teams)
-            {
-                Console.WriteLine(s.GetID().ToString());
-                foreach(bool k in s.GetGoals_Achieve())
-                {
-                    Console.WriteLine(k);
-                }
-            }
             stream.Close();
         }
 
@@ -277,26 +270,33 @@ namespace Server
                             Chat mes_team = (Chat)p;
                             writebuffer = Packet.Serialize(mes_team);
                             int team_id = mes_team.GetTeam_id();
-                            foreach (var (U, Tcpclient) in chatClient) // 전송한 유저에게도 메시지 재송신
+                            Team chat_team = null;
+                            foreach(Team s in teams)
                             {
-                                if (U.GetId() == mes_team.GetUser().GetId())
-                                {
-                                    NetworkStream s = Tcpclient.GetStream();
-                                    s.Write(writebuffer, 0, writebuffer.Length);
-                                    break;
-                                }
+                                if (mes_team.GetTeam_id() == s.GetID())
+                                    chat_team = s;
                             }
+                            if (chat_team == null)
+                            {
+                                Console.WriteLine("팀 메시지 전송 실패");break;
+                            }
+                            string admin_id = chat_team.GetAdmin().GetId();
                             foreach (var (U, Tcpclient) in chatClient)
                             {
                                 List<int> tlist = U.GetTeamIds();
-                                foreach (int tid in tlist)
+                                foreach (string temp_name in chat_team.GetMemid())
                                 {
-                                    if (tid == team_id)
+                                    if (U.GetId()==temp_name)
                                     {
                                         NetworkStream s = Tcpclient.GetStream();
                                         s.Write(writebuffer, 0, writebuffer.Length);
                                         break;
                                     }
+                                }
+                                if(admin_id == U.GetId())
+                                {
+                                    NetworkStream s = Tcpclient.GetStream();
+                                    s.Write(writebuffer, 0, writebuffer.Length);
                                 }
                             }
                             Console.WriteLine("팀 메세지 전송 완료");
